@@ -104,37 +104,36 @@ deactivate
 ```
 pip install --upgrade pip
 ```
-2. Install Jupyter
+2. Install Jupyter and Qiskit
 ```
-pip install jupyter
+pip install jupyter qiskit
 ```
-3. Install Qiskit
-```
-pip install qiskit
-```
-4. If the packages were installed correctly, Qiskit and Jupyter should show up in your virtual environment's active packages list
+3. If the packages were installed correctly, Jupyter and Qiskit should show up in your virtual environment's active packages list
 ```
 pip list
 ```
-
-> **Note**
-> If `pip` doesn't work, try using `pip3`
-
-## Usage
-1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
-2. Install necessary packages
+4. If you already have Jupyter and/or Qiskit installed, make sure they're up-to-date
+```
+pip install --upgrade jupyter qiskit
+```
+5. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
+6. Install necessary packages
 ```
 pip install -r requirements.txt
 ```
+
+> **Note**
+> If `pip` doesn't work, try using `pip3` and/or adding either `python -m` or `python3 -m` before `pip`
+
 > **Note**
 > If `requirements.txt` is in different directory than the one you're currently in, specify its path like `/path/to/requirements.txt`
-3. Decide how you want to run `Grovers-Algorithm.ipynb` and follow the appropriate steps
 
+## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 1. Open Visual Studio Code
     * If you downloaded Anaconda, open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. [Set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
+2. If you haven't already, [set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
 3. Select environment (using the `Python: Select Interpreter` command from the Command Palette)
 4. Open `Grovers-Algorithm.ipynb`
 5. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
