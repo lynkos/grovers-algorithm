@@ -14,11 +14,11 @@ Download and install [Anaconda](https://www.anaconda.com/download) along with An
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
 1. Make sure you have the latest version of pip:
 ```
-pip3 install --upgrade pip
+pip install --upgrade pip
 ```
 2. Install Jupyter using:
 ```
-pip3 install jupyter
+pip install jupyter
 ```
 
 ## Usage
