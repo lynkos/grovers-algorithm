@@ -15,20 +15,20 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 > **Warning**
 > It's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before installing packages with [`pip`](https://pip.pypa.io/en/stable/installation)
 1. Decide which directory you want to place it in and run `venv`
-      * UNIX:
+      * UNIX
       ```
       python -m venv /path/to/virtual/environment
       ```
-      * Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation:
+      * Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation
       ```
       python -m venv c:\path\to\virtual\environment
       ```
-      * Windows, if you haven't configured `PATH` and `PATHEXT`:
+      * Windows, if you haven't configured `PATH` and `PATHEXT`
       ```
       c:\Python35\python -m venv c:\path\to\virtual\environment
       ```
-      > **Note**
-      > If `python` doesn't work, try using `python3`
+> **Note**
+> If `python` doesn't work, try using `python3`
 
 2. Activate your virtual environment
 <table>
@@ -97,7 +97,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 deactivate
 ```
 
-### Installing Jupyter
+### Install Jupyter and Qiskit
 > **Warning**
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
 1. Make sure you have the latest version of `pip`
@@ -108,20 +108,17 @@ pip install --upgrade pip
 ```
 pip install jupyter
 ```
-
-> **Note**
-> If `pip` doesn't work, try using `pip3`
-
-### Installing Qiskit
+3. Install Qiskit
 ```
 pip install qiskit
 ```
+4. If the packages were installed correctly, Qiskit and Jupyter should show up in your virtual environment's active packages list
+```
+pip list
+```
 
 > **Note**
-> If the packages were installed correctly, Qiskit and Jupyter should show up in your virtual environment's active packages list
-> ```
-> pip list
-> ```
+> If `pip` doesn't work, try using `pip3`
 
 ## Usage
 1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
