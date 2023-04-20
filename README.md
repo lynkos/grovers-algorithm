@@ -19,16 +19,15 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
       ```
       python -m venv /path/to/virtual/environment
       ```
-      * Windows, if you've configured `PATH` and `PATHEXT`
+      * Windows
       ```
       python -m venv c:\path\to\virtual\environment
       ```
-      * Windows, if you haven't configured `PATH` and `PATHEXT`
-      ```
-      c:\Python35\python -m venv c:\path\to\virtual\environment
-      ```
      > **Note**
      > If `python` doesn't work, try using `python3`
+     
+     > **Note**
+     > If you haven't configured `PATH` and `PATHEXT` in Windows, try replacing `python` with `c:\Python35\python`
 
 2. Activate your virtual environment
 <table>
@@ -95,7 +94,12 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 ### Install Jupyter and Qiskit
 > **Warning**
 > Jupyter and Qiskit installation requires Python 3.7+
-1. Make sure you have the latest version of pip
+
+1a. If you haven't already, install pip via Python's `ensurepip` module
+```
+python -m ensurepip --upgrade
+```
+1b. If you do have pip, make sure you have the latest version
 ```
 pip install --upgrade pip
 ```
@@ -138,15 +142,17 @@ pip install -r requirements.txt
 4. Open `Grovers-Algorithm.ipynb`
 5. Click on `Select Kernel` and choose a kernel
 6. Click on `Run All` to run all cells
-7. Deactivate your virtual environment when you're finished with using `Grovers-Algorithm.ipynb`
-
-```
-deactivate
-```
 
 ### Jupyter Notebook
 ```
 jupyter notebook Grovers-Algorithm.ipynb
+```
+
+## Termination
+Deactivate your virtual environment when you're finished
+
+```
+deactivate
 ```
 
 ## Resources
