@@ -91,11 +91,6 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 </tr>
 </tbody>
 </table>
-3. Deactivate your virtual environment whenever you're ready
-
-```
-deactivate
-```
 
 ### Install Jupyter and Qiskit
 > **Warning**
@@ -129,6 +124,11 @@ pip install -r requirements.txt
 > If `requirements.txt` is in different directory than the one you're currently in, specify its path like `/path/to/requirements.txt`
 
 ## Usage
+### Jupyter Notebook
+```
+jupyter notebook Grovers-Algorithm.ipynb
+```
+
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 1. Open Visual Studio Code
     * If you downloaded Anaconda, open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
@@ -138,10 +138,10 @@ pip install -r requirements.txt
 4. Open `Grovers-Algorithm.ipynb`
 5. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
 6. Click on `Run All` to run all cells
+7. Deactivate your virtual environment whenever you're finished with using `Grovers-Algorithm.ipynb`
 
-### Jupyter Notebook
 ```
-jupyter notebook Grovers-Algorithm.ipynb
+deactivate
 ```
 
 ## Resources
