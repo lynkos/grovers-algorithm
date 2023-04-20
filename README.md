@@ -98,7 +98,7 @@ deactivate
 ### Installing Jupyter with `pip`
 > **Warning**
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
-1. Make sure you have the latest version of pip
+1. Make sure you have the latest version of `pip`
 ```
 pip install --upgrade pip
 ```
