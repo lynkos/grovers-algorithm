@@ -27,67 +27,67 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
       ```
       c:\Python35\python -m venv c:\path\to\virtual\environment
       ```
-> **Note**
-> If `python` doesn't work, try using `python3`
+     > **Note**
+     > If `python` doesn't work, try using `python3`
 
 2. Activate your virtual environment
 <table>
 <thead>
 <tr><th>Platform</th>
 <th>Shell</th>
-<th>Command to activate virtual environment</th>
+<th>Command</th>
 </tr>
 </thead>
 <tbody>
 <tr><td rowspan="4">POSIX</td>
 <td>bash/zsh</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 source /path/to/virtual/environment/bin/activate
 ```
-</td>
+</p></td>
 </tr>
 <tr><td>fish</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 source /path/to/virtual/environment/bin/activate.fish
 ```
-</td>
+</p></td>
 </tr>
 <tr><td>csh/tcsh</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 source /path/to/virtual/environment/bin/activate.csh
 ```
-</td>
+</p></td>
 </tr>
 <tr><td>PowerShell</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 source /path/to/virtual/environment/bin/Activate.ps1
 ```
-</td>
+</p></td>
 </tr>
 <tr><td rowspan="2">Windows</td>
 <td>cmd.exe</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 c:\path\to\virtual\environment\Scripts\activate.bat
 ```
-</td>
+</p></td>
 </tr>
 <tr><td>PowerShell</td>
-<td>
+<td><p style="margin-bottom: 0px">
 
 ```
 c:\path\to\virtual\environment\Scripts\Activate.ps1
 ```
-</td>
+</p></td>
 </tr>
 </tbody>
 </table>
