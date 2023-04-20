@@ -1,6 +1,6 @@
 # Grover's Algorithm
 ![](https://img.shields.io/static/v1?label=Language&message=Python+3.10.9&logo=python&color=yellow&labelColor=393939&logoColor=white)
-![](https://img.shields.io/static/v1?label=Kernel&message=Anaconda3&logo=anaconda&color=39ae39&labelColor=393939&logoColor=white)
+![](https://img.shields.io/static/v1?label=Kernel&message=Anaconda+3&logo=anaconda&color=39ae39&labelColor=393939&logoColor=white)
 ![](https://img.shields.io/static/v1?label=IDE&message=Visual+Studio+Code&logo=visual+studio+code&color=blue&labelColor=393939&logoColor=white)
 
 Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
