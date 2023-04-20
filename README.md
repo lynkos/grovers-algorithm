@@ -111,7 +111,7 @@ pip list
 ```
 pip install --upgrade jupyter qiskit
 ```
-5. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
+5. Download `Grovers-Algorithm.ipynb` and `requirements.txt`
 6. Install necessary packages
 ```
 pip install -r requirements.txt
