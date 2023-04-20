@@ -29,7 +29,7 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
       > **Note**
       > If `python` doesn't work, try using `python3`
 
-2. Activate your virtual environment:
+2. Activate your virtual environment
 <table>
 <thead>
 <tr><th>Platform</th>
@@ -98,11 +98,11 @@ deactivate
 ### Installing Jupyter with `pip`
 > **Warning**
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
-1. Make sure you have the latest version of pip:
+1. Make sure you have the latest version of pip
 ```
 pip install --upgrade pip
 ```
-2. Install Jupyter using:
+2. Install Jupyter
 ```
 pip install jupyter
 ```
@@ -126,7 +126,7 @@ pip install qiskit
 
 ## Usage
 1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
-2. Install necessary packages:
+2. Install necessary packages
 ```
 pip install -r requirements.txt
 ```
