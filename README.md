@@ -32,11 +32,14 @@ pip install -r requirements.txt
 3. Decide how you want to run `Grovers-Algorithm.ipynb` and follow the appropriate steps
 
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-1. [Set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
-2. Select environment (using the `Python: Select Interpreter` command from the Command Palette)
-3. Open `Grovers-Algorithm.ipynb`
-4. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
-5. Click on `Run All` to run all cells
+1. Open Visual Studio Code
+    * If you downloaded Anaconda, open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
+    * If not, open Visual Studio Code as you normally do
+2. [Set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
+3. Select environment (using the `Python: Select Interpreter` command from the Command Palette)
+4. Open `Grovers-Algorithm.ipynb`
+5. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
+6. Click on `Run All` to run all cells
 
 ### Jupyter Notebook
 ```
