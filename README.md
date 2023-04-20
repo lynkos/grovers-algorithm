@@ -11,9 +11,9 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
 ## Installation
-### Set Up Virtual Environment (Optional)
+### Set Up [Virtual Environment](https://docs.python.org/3.10/tutorial/venv.html) (Optional)
 > **Warning**
-> It's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using [`pip`](https://pip.pypa.io/en/stable/installation)
+> It's highly recommended that you setup a virtual environment before using [`pip`](https://pip.pypa.io/en/stable/installation)
 1. Decide which directory you want to place it in and run `venv`
       * UNIX
       ```
