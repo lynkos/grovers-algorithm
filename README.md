@@ -7,7 +7,7 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 
 ## Installation
 ### Installing Jupyter using Anaconda and conda
-Download and install [Anaconda](https://www.anaconda.com/download) and Anaconda's latest Python 3 version (currently Python 3.9), if you haven't already.
+Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python 3 version (currently Python 3.9), if you haven't already.
 
 ### Installing Jupyter with [pip](https://pip.pypa.io/en/stable/installation)
 > **Warning**
