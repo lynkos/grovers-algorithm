@@ -51,3 +51,4 @@ jupyter notebook Grovers-Algorithm.ipynb
 * [Jupyter Project Documentation](https://docs.jupyter.org/en/latest/index.html) [[PDF](https://buildmedia.readthedocs.org/media/pdf/jupyter/latest/jupyter.pdf)]
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Setting Up Environments in Visual Studio Code](https://py-vscode.readthedocs.io/en/latest/files/venv.html)
+* [Requirements Files](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
