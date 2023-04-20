@@ -27,7 +27,7 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
      > If `python` doesn't work, try using `python3`
      
      > **Note**
-     > If you haven't configured `PATH` and `PATHEXT` in Windows, try replacing `python` with `c:\Python35\python`
+     > If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with `c:\Python35\python`
 
 2. Activate your virtual environment
 <table>
@@ -95,42 +95,38 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 > **Warning**
 > Jupyter and Qiskit installation requires Python 3.7+
 
-1a. If you haven't already, install pip via Python's `ensurepip` module
-```
-python -m ensurepip --upgrade
-```
-1b. If you do have pip, make sure you have the latest version
-```
-pip install --upgrade pip
-```
-2. Install Jupyter and Qiskit
-```
-pip install jupyter qiskit qiskit[visualization]
-```
-> **Note**
-> If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
-> ```
-> pip install 'qiskit[visualization]'
-> ```
-3. If the packages were installed correctly, Jupyter and Qiskit should show up in your virtual environment's active packages list
+1. Pip
+     * If you haven't already, install pip via Python's `ensurepip` module
+     ```
+     python -m ensurepip --upgrade
+     ```
+     * If you already have pip, make sure you have the latest version
+     ```
+     pip install --upgrade pip
+     ```
+2. Jupyter and Qiskit
+     * If you haven't already, install Jupyter and Qiskit
+     ```
+     pip install jupyter qiskit qiskit[visualization]
+     ```
+     > **Note**
+     > If you already have some of these packages installed, remove them from the command
+
+     * If you already have Jupyter and/or Qiskit, make sure they're up-to-date
+     ```
+     pip install --upgrade jupyter qiskit qiskit[visualization]
+     ```
+     > **Warning**
+     > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
+
+3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
 ```
 pip list
 ```
-4. If you already have Jupyter and/or Qiskit installed, make sure they're up-to-date
-```
-pip install --upgrade jupyter qiskit
-```
-5. Download `Grovers-Algorithm.ipynb` and `requirements.txt`
-6. Install necessary packages
-```
-pip install -r requirements.txt
-```
+4. Download `Grovers-Algorithm.ipynb`
 
 > **Note**
 > If `pip` doesn't work, try using `pip3` and/or adding `python -m` or `python3 -m` before `pip`
-
-> **Note**
-> If `requirements.txt` is in different directory than the one you're currently in, specify its path like `/path/to/requirements.txt`
 
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
