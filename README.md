@@ -13,13 +13,13 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 ## Installation
 ### Set Up [Virtual Environment](https://docs.python.org/3.10/tutorial/venv.html) (Optional)
 > **Warning**
-> It's highly recommended that you setup a virtual environment before using [`pip`](https://pip.pypa.io/en/stable/installation)
-1. Decide which directory you want to place it in and run `venv`
+> It's highly recommended that you setup a virtual environment before using [pip](https://pip.pypa.io/en/stable/installation)
+1. Decide which directory you want to place it in then create your virtual environment
       * UNIX
       ```
       python -m venv /path/to/virtual/environment
       ```
-      * Windows, if you've configured `PATH` and `PATHEXT` variables
+      * Windows, if you've configured `PATH` and `PATHEXT`
       ```
       python -m venv c:\path\to\virtual\environment
       ```
@@ -95,7 +95,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 ### Install Jupyter and Qiskit
 > **Warning**
 > Jupyter and Qiskit installation requires Python 3.7+
-1. Make sure you have the latest version of `pip`
+1. Make sure you have the latest version of pip
 ```
 pip install --upgrade pip
 ```
@@ -138,7 +138,7 @@ pip install -r requirements.txt
 4. Open `Grovers-Algorithm.ipynb`
 5. Click on `Select Kernel` and choose a kernel
 6. Click on `Run All` to run all cells
-7. Deactivate your virtual environment whenever you're finished with using `Grovers-Algorithm.ipynb`
+7. Deactivate your virtual environment when you're finished with using `Grovers-Algorithm.ipynb`
 
 ```
 deactivate
