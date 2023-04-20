@@ -14,7 +14,7 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 ### Set Up [Virtual Environment](https://docs.python.org/3.10/tutorial/venv.html) (Optional)
 > **Warning**
 > It's highly recommended that you setup a virtual environment before using [pip](https://pip.pypa.io/en/stable/installation)
-1. Decide which directory you want to place it in then create your virtual environment
+1. Create your virtual environment
       * UNIX
       ```
       python -m venv /path/to/virtual/environment
