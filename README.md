@@ -7,13 +7,14 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 
 ## Requirements
 - [x] [Python 3.7+](https://www.python.org/downloads) (preferably latest version)
+- [x] [Pip](https://pip.pypa.io/en/stable/installation)
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
 ## Installation
 ### Set Up [Virtual Environment](https://docs.python.org/3.10/tutorial/venv.html) (Optional)
 > **Warning**
-> It's highly recommended that you setup a virtual environment before using [pip](https://pip.pypa.io/en/stable/installation)
+> It's highly recommended that you setup a virtual environment before using pip
 1. Create your virtual environment
       * UNIX
       ```
