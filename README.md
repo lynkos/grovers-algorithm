@@ -94,7 +94,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 
 ### Install Jupyter and Qiskit
 > **Warning**
-> Jupyter and Qiskit installation requires Python 3.7 or greater
+> Jupyter and Qiskit installation requires Python 3.7+
 1. Make sure you have the latest version of `pip`
 ```
 pip install --upgrade pip
