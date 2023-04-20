@@ -37,7 +37,7 @@ jupyter notebook Grovers-Algorithm.ipynb
 ```
 
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-1. [Set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter) in Visual Studio Code
+1. [Set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
 2. Select environment (using the `Python: Select Interpreter` command from the Command Palette)
 3. Once the appropriate environment is activated, open `Grovers-Algorithm.ipynb`
 4. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
