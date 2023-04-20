@@ -5,8 +5,6 @@
 ![](https://img.shields.io/static/v1?label=Kernel&style=flat&message=Anaconda+3&logo=anaconda&color=44a833&labelColor=393939&logoColor=44a833)
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
 
-Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
-
 ## Requirements
 - [x] [Python 3.7+](https://www.python.org/downloads) (preferably latest version)
 - [x] [Pip](https://pip.pypa.io/en/stable/installation)
