@@ -125,7 +125,7 @@ pip install qiskit
 pip install -r requirements.txt
 ```
 > **Note**
-> If `requirements.txt` is in different directory than the one you're currently in, specify its path like `path/to/requirements.txt`
+> If `requirements.txt` is in different directory than the one you're currently in, specify its path like `/path/to/requirements.txt`
 3. Decide how you want to run `Grovers-Algorithm.ipynb` and follow the appropriate steps
 
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
