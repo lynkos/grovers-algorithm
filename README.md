@@ -22,7 +22,15 @@ pip3 install jupyter
 ```
 
 ## Usage
-Download `Grovers-Algorithm.ipynb` to your computer. Decide how you want to run it and follow the appropriate steps.
+1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
+2. Install necessary packages:
+```
+pip install -r requirements.txt
+```
+> **Note**
+> If `requirements.txt` is in different directory than the one you're currently in, specify its path like `path/to/requirements.txt`
+3. Decide how you want to run `Grovers-Algorithm.ipynb` and follow the appropriate steps
+
 ### Jupyter Notebook
 ```
 jupyter notebook Grovers-Algorithm.ipynb
