@@ -101,8 +101,13 @@ pip install --upgrade pip
 ```
 2. Install Jupyter and Qiskit
 ```
-pip install jupyter qiskit
+pip install jupyter qiskit qiskit[visualization]
 ```
+> **Note**
+> If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
+> ```
+> pip install 'qiskit[visualization]'
+> ```
 3. If the packages were installed correctly, Jupyter and Qiskit should show up in your virtual environment's active packages list
 ```
 pip list
