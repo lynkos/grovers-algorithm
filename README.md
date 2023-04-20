@@ -14,23 +14,22 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 > **Note**
 > If you choose to install using [`pip`](https://pip.pypa.io/en/stable/installation), it's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) beforehand
 1. Decide which directory you want to place it in and run `venv`
-UNIX:
-```
-python -m venv /path/to/virtual/environment
-```
-Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation:
-```
-python -m venv c:\path\to\virtual\environment
-```
-Windows, if you haven't configured `PATH` and `PATHEXT`:
-```
-c:\Python35\python -m venv c:\path\to\virtual\environment
-```
+      * UNIX:
+      ```
+      python -m venv /path/to/virtual/environment
+      ```
+      * Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation:
+      ```
+      python -m venv c:\path\to\virtual\environment
+      ```
+      * Windows, if you haven't configured `PATH` and `PATHEXT`:
+      ```
+      c:\Python35\python -m venv c:\path\to\virtual\environment
+      ```
+      > **Note**
+      > If `python` doesn't work, try using `python3`
 
-> **Note**
-> If `python` doesn't work, try using `python3`
-
-2. Activate your virtual environment
+2. Activate your virtual environment:
 <table>
 <thead>
 <tr><th>Platform</th>
@@ -108,21 +107,22 @@ pip install --upgrade pip
 pip install jupyter
 ```
 
+> **Note**
+> If `pip` doesn't work, try using `pip3`
+
+### Installing Jupyter using Anaconda and conda
+Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python version, if you haven't already.
+
 ### Installing Qiskit
 ```
 pip install qiskit
 ```
 
 > **Note**
-> If `pip` doesn't work, try using `pip3`
-
-If the packages were installed correctly, Qiskit and Jupyter should show up in your virtual environment's active packages list
-```
-pip list
-```
-
-### Installing Jupyter using Anaconda and conda
-Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python version, if you haven't already.
+> If the packages were installed correctly, Qiskit and Jupyter should show up in your virtual environment's active packages list
+> ```
+> pip list
+> ```
 
 ## Usage
 1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
