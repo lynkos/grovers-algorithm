@@ -1,5 +1,45 @@
 # Grover's Algorithm
+![](https://img.shields.io/static/v1?label=Language&message=Python+3.10.9&logo=python&color=yellow&labelColor=393939&logoColor=white)
+![](https://img.shields.io/static/v1?label=Kernel&message=Anaconda3&logo=anaconda&color=39ae39&labelColor=393939&logoColor=white)
+![](https://img.shields.io/static/v1?label=IDE&message=Visual+Studio+Code&logo=visual+studio+code&color=blue&labelColor=393939&logoColor=white)
+
 Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 
-Kernel: Anaconda3<br />
-Language: Python3
+## Installation
+### Installing Jupyter using Anaconda and conda
+Download and install [Anaconda](https://www.anaconda.com/download) and Anaconda's latest Python 3 version (currently Python 3.9), if you haven't already.
+
+### Installing Jupyter with [pip](https://pip.pypa.io/en/stable/installation)
+> **Warning**
+> Jupyter installation requires Python 3.3 or greater, or Python 2.7
+1. Make sure you have the latest version of pip:
+```
+pip3 install --upgrade pip
+```
+2. Install Jupyter using:
+```
+pip3 install jupyter
+```
+
+## Usage
+Download `Grovers-Algorithm.ipynb` to your computer. Decide how you want to run it and follow the appropriate steps.
+### Jupyter Notebook
+```
+jupyter notebook Grovers-Algorithm.ipynb
+```
+
+### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+1. Activate an Anaconda environment in Visual Studio Code, or another Python environment in which you've installed Jupyter
+2. Select an environment (using the `Python: Select Interpreter` command from the Command Palette)
+3. Once the appropriate environment is activated, open `Grovers-Algorithm.ipynb`
+4. Click on `Select Kernel` to choose a kernel (preferably Anaconda3)
+5. Click on `Run All` to run all cells
+
+## Resources
+* [Anaconda Documentation](https://docs.anaconda.com)
+* [Anaconda Distribution Documentation](https://docs.continuum.io/free/anaconda)
+* [Conda Documentation](https://docs.conda.io/en/latest)
+* [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/latest)
+* [Jupyter Project Documentation](https://docs.jupyter.org/en/latest/index.html) [[PDF](https://buildmedia.readthedocs.org/media/pdf/jupyter/latest/jupyter.pdf)]
+* [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
+* [Setting Up Environments in Visual Studio Code](https://py-vscode.readthedocs.io/en/latest/files/venv.html)
