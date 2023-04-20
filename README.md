@@ -6,7 +6,7 @@
 Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 
 ## Requirements
-- [x] [Python 3.7+](https://www.python.org/downloads) (preferably Python's latest version)
+- [x] [Python 3.7+](https://www.python.org/downloads) (preferably latest version)
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
@@ -19,7 +19,7 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
       ```
       python -m venv /path/to/virtual/environment
       ```
-      * Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation
+      * Windows, if you've configured `PATH` and `PATHEXT` variables
       ```
       python -m venv c:\path\to\virtual\environment
       ```
