@@ -5,11 +5,100 @@
 
 Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 
+## Requirements
+- [ ] [Python 3.7+](https://www.python.org/downloads) (preferably Python's latest version)
+- [ ] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
+- [ ] [Qiskit](https://qiskit.org/documentation/getting_started.html)
+
 ## Installation
 ### Installing Jupyter using Anaconda and conda
-Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python 3 version, if you haven't already.
+Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python version, if you haven't already.
 
-### Installing Jupyter with [pip](https://pip.pypa.io/en/stable/installation)
+> **Note**
+> If you choose to install using `pip`, it's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) beforehand
+1. Decide which directory you want to place it in and run `venv`
+UNIX:
+```
+python -m venv /path/to/virtual/environment
+```
+Windows, if you've configured `PATH` and `PATHEXT` variables for your Python installation:
+```
+python -m venv c:\path\to\virtual\environment
+```
+Windows, if you haven't configured `PATH` and `PATHEXT`:
+```
+c:\Python35\python -m venv c:\path\to\virtual\environment
+```
+2. Activate your virtual environment
+<table>
+<thead>
+<tr><th>Platform</th>
+<th>Shell</th>
+<th>Command to activate virtual environment</th>
+</tr>
+</thead>
+<tbody>
+<tr><td rowspan="4">POSIX</td>
+<td>bash/zsh</td>
+<td>
+
+```
+source /path/to/virtual/environment/bin/activate
+```
+</td>
+</tr>
+<tr><td>fish</td>
+<td>
+
+```
+source /path/to/virtual/environment/bin/activate.fish
+```
+</td>
+</tr>
+<tr><td>csh/tcsh</td>
+<td>
+
+```
+source /path/to/virtual/environment/bin/activate.csh
+```
+</td>
+</tr>
+<tr><td>PowerShell</td>
+<td>
+
+```
+source /path/to/virtual/environment/bin/Activate.ps1
+```
+</td>
+</tr>
+<tr><td rowspan="2">Windows</td>
+<td>cmd.exe</td>
+<td>
+
+```
+c:\path\to\virtual\environment\Scripts\activate.bat
+```
+</td>
+</tr>
+<tr><td>PowerShell</td>
+<td>
+
+```
+c:\path\to\virtual\environment\Scripts\Activate.ps1
+```
+</td>
+</tr>
+</tbody>
+</table>
+3. Deactivate your virtual environment whenever you're ready
+```
+deactivate
+```
+
+> **Note**
+> If `python` doesn't work, try using `python3`
+
+### Installing Jupyter with `[pip](https://pip.pypa.io/en/stable/installation)`
 > **Warning**
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
 1. Make sure you have the latest version of pip:
@@ -20,6 +109,14 @@ pip install --upgrade pip
 ```
 pip install jupyter
 ```
+
+### Installing Qiskit
+```
+pip install qiskit
+```
+
+> **Note**
+> If `pip` doesn't work, try using `pip3`
 
 ## Usage
 1. Download `Grovers-Algorithm.ipynb` and `requirements.txt` to your computer
@@ -53,4 +150,5 @@ jupyter notebook Grovers-Algorithm.ipynb
 * [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/latest)
 * [Jupyter Project Documentation](https://docs.jupyter.org/en/latest/index.html) [[PDF](https://buildmedia.readthedocs.org/media/pdf/jupyter/latest/jupyter.pdf)]
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
+* [Qiskit Documentation](https://qiskit.org/documentation/index.html)
 * [Requirements Files](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
