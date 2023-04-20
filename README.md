@@ -11,8 +11,9 @@ Python implementation of Grover's Algorithm aka Quantum Search Algorithm.
 - [ ] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
 ## Installation
-> **Note**
-> If you choose to install using [`pip`](https://pip.pypa.io/en/stable/installation), it's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) beforehand
+### Set Up Virtual Environment (Optional)
+> **Warning**
+> It's highly recommended that you setup a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before installing packages with [`pip`](https://pip.pypa.io/en/stable/installation)
 1. Decide which directory you want to place it in and run `venv`
       * UNIX:
       ```
@@ -91,11 +92,12 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 </tbody>
 </table>
 3. Deactivate your virtual environment whenever you're ready
+
 ```
 deactivate
 ```
 
-### Installing Jupyter with `pip`
+### Installing Jupyter
 > **Warning**
 > Jupyter installation requires Python 3.3 or greater, or Python 2.7
 1. Make sure you have the latest version of `pip`
@@ -109,9 +111,6 @@ pip install jupyter
 
 > **Note**
 > If `pip` doesn't work, try using `pip3`
-
-### Installing Jupyter using Anaconda and conda
-Download and install [Anaconda](https://www.anaconda.com/download) along with Anaconda's latest Python version, if you haven't already.
 
 ### Installing Qiskit
 ```
