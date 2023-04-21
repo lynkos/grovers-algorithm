@@ -133,15 +133,9 @@ pip list
 1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. Open the Command Palette and press the following keyboard shortcut
-    * Mac
-    ```
-    ⌘ + Shift + P
-    ```
-    * Windows
-    ```
-    CTRL + Shift + P
-    ```
+2. Open the Command Palette with the relevant keyboard shortcut
+    * `⌘ + Shift + P` for Mac
+    * `CTRL + Shift + P` for Windows
 4. Search for and select the `Python: Select Interpreter` option
 5. Select your recently created virtual environment
 6. Open `Grovers-Algorithm.ipynb`
