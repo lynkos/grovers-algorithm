@@ -109,9 +109,6 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      pip install jupyter qiskit qiskit[visualization]
      ```
-     > **Note**
-     > If you already have some of these packages installed, remove them from the command
-
      * If you already have Jupyter and/or Qiskit, make sure they're up-to-date
      ```
      pip install --upgrade jupyter qiskit qiskit[visualization]
