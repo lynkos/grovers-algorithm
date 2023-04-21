@@ -133,7 +133,7 @@ pip list
 1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. Open the Command Palette
+2. Open the Command Palette and press the following keyboard shortcut
     * Mac
     ```
     ⌘ + Shift + P
