@@ -11,7 +11,7 @@
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
-## Set Up
+## Setting Up
 > **Warning**
 > It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
 1. Create your virtual environment
@@ -133,7 +133,7 @@ pip list
 2. Open the Command Palette with the relevant keyboard shortcut
     * `⌘ + Shift + P` for Mac
     * `CTRL + Shift + P` for Windows
-4. Search for and select the `Python: Select Interpreter` option
+4. Search and select `Python: Select Interpreter`
 5. Select your recently created virtual environment
 6. Open `Grovers-Algorithm.ipynb`
 7. Click on `Select Kernel` and choose a kernel
