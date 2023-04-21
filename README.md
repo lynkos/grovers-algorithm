@@ -11,10 +11,9 @@
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
-## Installation
-### Set Up [Virtual Environment](https://docs.python.org/3.10/tutorial/venv.html) (Optional)
+## Set Up
 > **Warning**
-> It's highly recommended that you setup a virtual environment before using pip
+> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
 1. Create your virtual environment
       * UNIX
       ```
@@ -92,7 +91,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 </tbody>
 </table>
 
-### Install Jupyter and Qiskit
+## Installation
 > **Warning**
 > Jupyter and Qiskit installation requires Python 3.7+
 
@@ -134,11 +133,12 @@ pip list
 1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. If you haven't already, [set up and activate your environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html) (Anaconda or another Python environment in which you've installed Jupyter)
-3. Select environment (using the `Python: Select Interpreter` command from the Command Palette)
-4. Open `Grovers-Algorithm.ipynb`
-5. Click on `Select Kernel` and choose a kernel
-6. Click on `Run All` to run all cells
+2. Press `ctrl + shift + P` to open the Command Palette
+3. Search for `interpreter` and choose the `Python: Select Interpreter` option
+4. Select your recently created virtual environment
+5. Open `Grovers-Algorithm.ipynb`
+6. Click on `Select Kernel` and choose a kernel
+7. Click on `Run All` to run all cells
 
 ### Jupyter Notebook
 ```
@@ -161,3 +161,4 @@ deactivate
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Qiskit Documentation](https://qiskit.org/documentation/index.html)
 * [Requirements Files](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
+* [Setting Up Environments - Visual Studio Code](https://py-vscode.readthedocs.io/en/latest/files/venv.html)
