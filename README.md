@@ -11,7 +11,7 @@
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
-## Initial Set Up
+## Set Up
 > **Warning**
 > It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
 1. Create your virtual environment
