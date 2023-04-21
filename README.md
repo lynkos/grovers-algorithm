@@ -11,7 +11,7 @@
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
-## Set Up
+## Initial Set Up
 > **Warning**
 > It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
 1. Create your virtual environment
@@ -133,12 +133,20 @@ pip list
 1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. Press `ctrl + shift + P` to open the Command Palette
-3. Search for `interpreter` and choose the `Python: Select Interpreter` option
-4. Select your recently created virtual environment
-5. Open `Grovers-Algorithm.ipynb`
-6. Click on `Select Kernel` and choose a kernel
-7. Click on `Run All` to run all cells
+2. Open the Command Palette
+    * Mac
+    ```
+    ⌘ + Shift + P
+    ```
+    * Windows
+    ```
+    CTRL + Shift + P
+    ```
+4. Search for and select the `Python: Select Interpreter` option
+5. Select your recently created virtual environment
+6. Open `Grovers-Algorithm.ipynb`
+7. Click on `Select Kernel` and choose a kernel
+8. Click on `Run All` to run all cells
 
 ### Jupyter Notebook
 ```
