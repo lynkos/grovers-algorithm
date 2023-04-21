@@ -100,7 +100,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      python -m ensurepip --upgrade
      ```
-     * If you already have pip, make sure you have the latest version
+     * If you already have pip, ensure you have the latest version
      ```
      pip install --upgrade pip
      ```
@@ -109,12 +109,12 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      pip install jupyter qiskit qiskit[visualization]
      ```
+     > **Warning**
+     > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
      * If you already have Jupyter and/or Qiskit, make sure they're up-to-date
      ```
      pip install --upgrade jupyter qiskit qiskit[visualization]
      ```
-     > **Warning**
-     > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
 
 3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
 ```
