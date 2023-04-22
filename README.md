@@ -11,9 +11,9 @@
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
-## Setting Up
+## Setting Up (Optional)
 > **Warning**
-> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
+> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip, especially if you'll be using Visual Studio Code
 1. Create your virtual environment
       * UNIX
       ```
@@ -113,7 +113,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      pip install --upgrade jupyter qiskit qiskit[visualization]
      ```
-     > **Warning**
+     > **Note**
      > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
 
 3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
@@ -130,25 +130,28 @@ pip list
 1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
-2. Open the Command Palette with the relevant keyboard shortcut
+2. Set up a [virtual environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html), if you haven't already
+3. Open the Command Palette with the relevant keyboard shortcut
     * `⌘ + Shift + P` for Mac
     * `CTRL + Shift + P` for Windows
 4. Search and select `Python: Select Interpreter`
 5. Select your recently created virtual environment
 6. Open `Grovers-Algorithm.ipynb`
-7. Click on `Select Kernel` and choose a kernel
+7. Click on `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 8. Click on `Run All` to run all cells
+9. Deactivate your virtual environment when you're finished
+```
+deactivate
+```
 
 ### Jupyter Notebook
+1. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
 ```
 jupyter notebook Grovers-Algorithm.ipynb
 ```
-
-## Termination
-Deactivate your virtual environment when you're finished
-
+2. Run `Grovers-Algorithm.ipynb`
 ```
-deactivate
+jupyter run Grovers-Algorithm.ipynb
 ```
 
 ## Resources
@@ -160,4 +163,3 @@ deactivate
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Qiskit Documentation](https://qiskit.org/documentation/index.html)
 * [Requirements Files](https://pip.pypa.io/en/latest/user_guide/#requirements-files)
-* [Setting Up Environments - Visual Studio Code](https://py-vscode.readthedocs.io/en/latest/files/venv.html)
