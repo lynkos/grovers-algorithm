@@ -13,7 +13,7 @@
 
 ## Setting Up (Optional)
 > **Warning**
-> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip, especially if you're using Visual Studio Code
+> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
 1. Create your virtual environment
       * UNIX
       ```
