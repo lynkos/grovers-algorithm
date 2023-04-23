@@ -135,7 +135,7 @@ pip list
     * `⌘ + Shift + P` for Mac
     * `CTRL + Shift + P` for Windows
 4. Search and select `Python: Select Interpreter`
-5. Select your recently created virtual environment
+5. Select your virtual environment
 6. Open `Grovers-Algorithm.ipynb`
 7. Click on `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 8. Click on `Run All` to run all cells
