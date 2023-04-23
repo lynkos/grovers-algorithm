@@ -126,10 +126,10 @@ pip list
 > If `pip` doesn't work, try using `pip3` and/or adding `python -m` or `python3 -m` before `pip`
 
 ## Usage
-### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-1. Open [Visual Studio Code](https://code.visualstudio.com/download)
+### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
+1. Open Visual Studio Code
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
-    * If not, open Visual Studio Code as you normally do
+    * If not, open [Visual Studio Code](https://code.visualstudio.com/download) as you normally do
 2. Set up a [virtual environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html), if you haven't already
 3. Open the Command Palette with the relevant keyboard shortcut
     * `⌘ + Shift + P` for Mac
