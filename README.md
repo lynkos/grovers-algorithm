@@ -127,7 +127,7 @@ pip list
 
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
-1. Open Visual Studio Code
+1. Open [Visual Studio Code](https://code.visualstudio.com/download)
     * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
     * If not, open Visual Studio Code as you normally do
 2. Set up a [virtual environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html), if you haven't already
@@ -162,3 +162,4 @@ jupyter run Grovers-Algorithm.ipynb
 * [Jupyter Project Documentation](https://docs.jupyter.org/en/latest/index.html) [[PDF](https://buildmedia.readthedocs.org/media/pdf/jupyter/latest/jupyter.pdf)]
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Qiskit Documentation](https://qiskit.org/documentation/index.html)
+* [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
