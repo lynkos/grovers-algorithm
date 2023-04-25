@@ -115,15 +115,13 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      > **Note**
      > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
-
 3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
 ```
 pip list
 ```
-4. Download `Grovers-Algorithm.ipynb`
-
 > **Note**
 > If `pip` doesn't work, try using `pip3` and/or adding `python -m` or `python3 -m` before `pip`
+4. Download `Grovers-Algorithm.ipynb`
 
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
