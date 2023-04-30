@@ -104,12 +104,7 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
      ```
      pip install --upgrade pip
      ```
-2. Jupyter and Qiskit
-     * If you haven't already, install Jupyter and/or Qiskit
-     ```
-     pip install jupyter qiskit qiskit[visualization]
-     ```
-     * If you already have Jupyter and/or Qiskit, make sure they're up-to-date
+2. Install/update Jupyter and Qiskit
      ```
      pip install --upgrade jupyter qiskit qiskit[visualization]
      ```
