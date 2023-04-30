@@ -30,66 +30,66 @@
      > If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with `c:\Python35\python`
 
 2. Activate your virtual environment
-<table>
-<thead>
-<tr><th>Platform</th>
-<th>Shell</th>
-<th>Command</th>
-</tr>
-</thead>
-<tbody>
-<tr><td rowspan="4">POSIX</td>
-<td>bash/zsh</td>
-<td><p style="margin-bottom: 0px">
+     <table>
+     <thead>
+     <tr><th>Platform</th>
+     <th>Shell</th>
+     <th>Command</th>
+     </tr>
+     </thead>
+     <tbody>
+     <tr><td rowspan="4">POSIX</td>
+     <td>bash/zsh</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-source /path/to/virtual/environment/bin/activate
-```
-</p></td>
-</tr>
-<tr><td>fish</td>
-<td><p style="margin-bottom: 0px">
+     ```
+     source /path/to/virtual/environment/bin/activate
+     ```
+     </p></td>
+     </tr>
+     <tr><td>fish</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-source /path/to/virtual/environment/bin/activate.fish
-```
-</p></td>
-</tr>
-<tr><td>csh/tcsh</td>
-<td><p style="margin-bottom: 0px">
+     ```
+     source /path/to/virtual/environment/bin/activate.fish
+     ```
+     </p></td>
+     </tr>
+     <tr><td>csh/tcsh</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-source /path/to/virtual/environment/bin/activate.csh
-```
-</p></td>
-</tr>
-<tr><td>PowerShell</td>
-<td><p style="margin-bottom: 0px">
+     ```
+     source /path/to/virtual/environment/bin/activate.csh
+     ```
+     </p></td>
+     </tr>
+     <tr><td>PowerShell</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-source /path/to/virtual/environment/bin/Activate.ps1
-```
-</p></td>
-</tr>
-<tr><td rowspan="2">Windows</td>
-<td>cmd.exe</td>
-<td><p style="margin-bottom: 0px">
+     ```
+     source /path/to/virtual/environment/bin/Activate.ps1
+     ```
+     </p></td>
+     </tr>
+     <tr><td rowspan="2">Windows</td>
+     <td>cmd.exe</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-c:\path\to\virtual\environment\Scripts\activate.bat
-```
-</p></td>
-</tr>
-<tr><td>PowerShell</td>
-<td><p style="margin-bottom: 0px">
+     ```
+     c:\path\to\virtual\environment\Scripts\activate.bat
+     ```
+     </p></td>
+     </tr>
+     <tr><td>PowerShell</td>
+     <td><p style="margin-bottom: 0px">
 
-```
-c:\path\to\virtual\environment\Scripts\Activate.ps1
-```
-</p></td>
-</tr>
-</tbody>
-</table>
+     ```
+     c:\path\to\virtual\environment\Scripts\Activate.ps1
+     ```
+     </p></td>
+     </tr>
+     </tbody>
+     </table>
 
 ## Installation
 > **Warning**
@@ -133,19 +133,19 @@ c:\path\to\virtual\environment\Scripts\Activate.ps1
 7. Click `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 8. Click `Run All` to run all cells
 9. Deactivate your virtual environment when you're finished
-```
-deactivate
-```
+     ```
+     deactivate
+     ```
 
 ### Jupyter Notebook
 1. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
-```
-jupyter notebook Grovers-Algorithm.ipynb
-```
+     ```
+     jupyter notebook Grovers-Algorithm.ipynb
+     ```
 2. Run `Grovers-Algorithm.ipynb`
-```
-jupyter run Grovers-Algorithm.ipynb
-```
+     ```
+     jupyter run Grovers-Algorithm.ipynb
+     ```
 
 ## Resources
 * [Anaconda Documentation](https://docs.anaconda.com)
