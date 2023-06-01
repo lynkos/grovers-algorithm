@@ -94,7 +94,6 @@
 ## Installation
 > **Warning**
 > Jupyter and Qiskit installation requires Python 3.7+
-
 1. Pip
      * If you haven't already, install pip via Python's [`ensurepip`](https://docs.python.org/3/library/ensurepip.html) module
      ```
