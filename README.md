@@ -24,7 +24,7 @@
       python -m venv c:\path\to\virtual\environment
       ```
      > **Note**
-     > If `python` doesn't work, try using `python3`<br>
+     > If `python` doesn't work, try using `python3`
      > If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with `c:\Python35\python`
 
 1. Activate your virtual environment
