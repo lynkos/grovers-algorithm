@@ -24,13 +24,11 @@
       python -m venv c:\path\to\virtual\environment
       ```
      > **Note**
-     > If `python` doesn't work, try using `python3`<br><br>
-     > If you haven't configured `PATH` and `PATHEXT` in Windows, execute
+     > * If `python` doesn't work, try using `python3`
+     > * If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with the following command's output
      > ```
      > where python
      > ```
-     > and replace `python` with the command's output
-
 1. Activate your virtual environment
      <table>
      <thead>
