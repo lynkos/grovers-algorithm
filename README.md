@@ -13,7 +13,7 @@
 
 ## Setting Up (Optional)
 > **Warning**
-> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.10/tutorial/venv.html) before using pip
+> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.11/tutorial/venv.html) before using pip
 1. Create your virtual environment
       * UNIX
       ```
@@ -25,7 +25,7 @@
       ```
      > **Note**
      > If `python` doesn't work, try using `python3`<br><br>
-     > If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with `c:\Python35\python`
+     > If you haven't configured `PATH` and `PATHEXT` in Windows, run `where python` and replace `python` with the command's output
 
 1. Activate your virtual environment
      <table>
