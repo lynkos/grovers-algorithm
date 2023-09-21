@@ -25,7 +25,11 @@
       ```
      > **Note**
      > If `python` doesn't work, try using `python3`<br><br>
-     > If you haven't configured `PATH` and `PATHEXT` in Windows, run `where python` and replace `python` with the command's output
+     > If you haven't configured `PATH` and `PATHEXT` in Windows, execute
+     > ```
+     > where python
+     > ```
+     > and replace `python` with the command's output
 
 1. Activate your virtual environment
      <table>
