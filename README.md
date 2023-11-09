@@ -4,7 +4,6 @@
 ![](https://img.shields.io/static/v1?label=Packages&style=flat&message=Qiskit&logo=qiskit&color=6929c4&labelColor=393939&logoColor=af7afa)
 ![](https://img.shields.io/static/v1?label=Kernel&style=flat&message=Anaconda+3&logo=anaconda&color=44a833&labelColor=393939&logoColor=44a833)
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
-<a href="#license">![](https://img.shields.io/static/v1?label=©+License&style=flat&message=MIT&color=cc0000&labelColor=393939)</a>
 
 ## Requirements
 - [x] [Python 3.7+](https://www.python.org/downloads) (preferably latest version)
@@ -160,7 +159,7 @@
 ## Contact
 If you've noticed a bug or have any ideas or questions related to this project, please [open an issue](https://github.com/lynkos/grovers-algorithm/issues/new) and include a relevant label/tag. For any other questions, comments, concerns, etc. feel free to reach out to me via [email](mailto:kiwi2mii@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kiran-brahmatewari)! I'll try my best to respond in a timely manner, though I can't make any guarantees!
 
-## Support
+## Show Support
 Please :star: star :star: this repo if you find it helpful or useful!
 
 ## License
