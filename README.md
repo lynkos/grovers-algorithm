@@ -157,4 +157,4 @@
 * [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
 
 ## Contact
-If you've noticed a bug or have any ideas or questions related to this project, please open an issue and include the relevant tag. For any other questions, comments, concerns, etc. feel free to reach out to me via [email](mailto:kiwi2mii@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kiran-brahmatewari)! I'll try my best to respond in a timely manner, though I can't make any guarantees!
+If you've noticed a bug or have any ideas or questions related to this project, please [open an issue](https://github.com/lynkos/grovers-algorithm/issues/new) and include a relevant label/tag. For any other questions, comments, concerns, etc. feel free to reach out to me via [email](mailto:kiwi2mii@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kiran-brahmatewari)! I'll try my best to respond in a timely manner, though I can't make any guarantees!
