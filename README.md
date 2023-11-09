@@ -164,4 +164,4 @@ If you've noticed a bug or have any ideas or questions related to this project, 
 Please :star: star :star: this repo if you find it helpful or useful!
 
 ## License
-Distributed under the [MIT License](https://github.com/lynkos/grovers-algorithm/blob/main/LICENSE.md), Copyright (c) 2023 Kiran Brahmatewari
+Distributed under the [MIT License](https://github.com/lynkos/grovers-algorithm/blob/main/LICENSE.md), Copyright © 2023 Kiran Brahmatewari
