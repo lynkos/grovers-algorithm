@@ -12,7 +12,7 @@
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
 
 ## Setting Up (Optional)
-> **Warning**
+> [!IMPORTANT]
 > It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.11/tutorial/venv.html) before using pip
 1. Create your virtual environment
       * UNIX
@@ -23,7 +23,7 @@
       ```
       python -m venv c:\path\to\virtual\environment
       ```
-     > **Note**
+     > [!NOTE]
      > * If `python` doesn't work, try using `python3`
      > * If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with the following command's output
      > ```
@@ -92,7 +92,7 @@
      </table>
 
 ## Installation
-> **Warning**
+> [!IMPORTANT]
 > Jupyter and Qiskit installation requires Python 3.7+
 1. Pip
      * If you haven't already, install pip via Python's [`ensurepip`](https://docs.python.org/3/library/ensurepip.html) module
@@ -107,13 +107,13 @@
      ```
      pip install --upgrade jupyter qiskit qiskit[visualization] qiskit[quantum_info]
      ```
-     > **Note**
+     > [!NOTE]
      > If you're using zsh, you'll need to put `qiskit[visualization]` and `qiskit[quantum_info]` in quotes
 3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
      ```
      pip list
      ```
-     > **Note**
+     > [!NOTE]
      > If `pip` doesn't work, try using `pip3` and/or adding `python -m` or `python3 -m` before `pip`
 4. Download `Grovers-Algorithm.ipynb`
 
@@ -155,3 +155,6 @@
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Qiskit Documentation](https://qiskit.org/documentation/index.html)
 * [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
+
+## Contact
+If you've noticed a bug or have any ideas or questions related to this project, please open an issue and include the relevant tag. For any other questions, comments, concerns, etc. feel free to reach out to me via [email](mailto:kiwi2mii@gmail.com) or [LinkedIn](https://www.linkedin.com/in/kiran-brahmatewari)! I'll try my best to respond in a timely manner, though I can't make any guarantees!
