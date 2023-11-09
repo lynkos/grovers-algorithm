@@ -160,7 +160,7 @@
 Please :star: [star](https://github.com/lynkos/grovers-algorithm) :star: this repo if you find it helpful or useful!
 
 ## Contact
-For all questions, bugs, suggestions, etc. relating to this project, please create an [issue](https://github.com/lynkos/grovers-algorithm/issues/new) with a relevant label/tag. For all other queries, feel free to reach out to me via any of the following links.<br>
+For all questions, bugs, suggestions, etc. relating to this project, please create an [issue](https://github.com/lynkos/grovers-algorithm/issues/new) with a relevant label/tag. For all other queries, feel free to reach out to me via:<br>
 
 <a href="https://twitter.com/0xLynkos" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="31px" height="27px" alt="Twitter" /></a>&nbsp; <a href="mailto:kiwi2mii@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="28px" height="28px" alt="Gmail" /></a> &nbsp; <a href="https://www.linkedin.com/in/kiran-brahmatewari" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" width="28px" height="28px" alt="LinkedIn" /></a>
 
