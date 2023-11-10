@@ -6,7 +6,7 @@
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
 
 ## Requirements
-- [x] [Python 3.7+](https://www.python.org/downloads) (preferably latest version)
+- [x] [Python 3.7 – 3.11](https://www.python.org/downloads)
 - [x] [Pip](https://pip.pypa.io/en/stable/installation)
 - [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
 - [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
