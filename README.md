@@ -105,7 +105,7 @@
      ```
 2. Install/update Jupyter and Qiskit
      ```
-     pip install --upgrade jupyter qiskit qiskit[visualization] qiskit[quantum_info]
+     pip install --upgrade jupyter qiskit qiskit[visualization] qiskit[quantum_info] qiskit-aer
      ```
      > [!WARNING]
      > If you're using zsh, you'll need to put `qiskit[visualization]` and `qiskit[quantum_info]` in quotes
