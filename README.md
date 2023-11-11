@@ -105,10 +105,10 @@
      ```
 2. Install/update Jupyter and Qiskit
      ```
-     pip install --upgrade jupyter qiskit qiskit[visualization] qiskit[quantum_info] qiskit-aer
+     pip install --upgrade jupyter qiskit qiskit[visualization] qiskit-aer
      ```
      > [!WARNING]
-     > If you're using zsh, you'll need to put `qiskit[visualization]` and `qiskit[quantum_info]` in quotes
+     > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
 3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
      ```
      pip list
