@@ -2,7 +2,7 @@ name: grovers_env
 channels:
   - defaults
 dependencies:
-  - python=3.10.9
+  - python=3.10.13
   - jupyter
   - matplotlib
   - pip
