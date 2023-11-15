@@ -6,7 +6,6 @@
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
 
 ## Requirements
-- [x] [Python](https://www.python.org/downloads)
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
 > [!IMPORTANT]
 > If you have trouble deciding between Anaconda and Miniconda, please refer to the table below
