@@ -1,0 +1,15 @@
+name: grovers_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10.9
+  - jupyter
+  - matplotlib
+  - pip
+  - pip:
+    - qiskit
+    - qiskit-aer
+    - qiskit-terra
+    - pylatexenc
+    - seaborn
+    - numpy
