@@ -8,42 +8,40 @@
 ## Requirements
 - [x] [Python](https://www.python.org/downloads)
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
-     > [!IMPORTANT]
-     > If you have trouble deciding whether you want to install Anaconda or Miniconda, please refer to the table below
-     > <table>
-     <thead>
-     <tr>
-     <th><center>Anaconda</center></th>
-     <th><center>Miniconda</center></th>
-     </tr>
-     </thead>
-     <tbody>
-     <tr>
-     <td>Don't want to individually install each package you want to use</td>
-     <td>Don't mind individually installing each package you want to use</td>
-     </tr>
-     <tr>
-     <td>Like the convenience of having Python and 1,500+ scientific packages automatically installed at once</td>
-     <td>Want fast access to Python and the conda commands and you wish to sort out the other programs later</td>
-     </tr>
-     <tr>
-     <td>Have the time and disk space — a few minutes and 3 GB</td>
-     <td>Don't have the time or disk space to install 1,500+ packages at once</td>
-     </tr>
-     <tr>
-     <td>Are new to conda or Python</td>
-     <td>Are familiar with conda or Python</td>
-     </tr>
-     </tbody>
-     </table>
+> [!IMPORTANT]
+> If you have trouble deciding between Anaconda and Miniconda, please refer to the table below
+> <table>
+> <thead>
+> <tr>
+> <th><center>Anaconda</center></th>
+> <th><center>Miniconda</center></th>
+> </tr>
+> </thead>
+> <tbody>
+> <tr>
+> <td>Are new to conda and/or Python</td>
+> <td>Are familiar with conda and/or Python</td>
+> </tr>
+> <tr>
+> <td>Like the convenience of having Python and 1,500+ scientific packages automatically installed at once</td>
+> <td>Want fast access to Python and the conda commands and plan to sort out the other programs later</td>
+> </tr>
+> <tr>
+> <td>Have the time and space — a few minutes and 3 GB</td>
+> <td>Don't have the time or space to install 1,500+ packages</td>
+> </tr>
+> <tr>
+> <td>Don't want to individually install each package</td>
+> <td>Don't mind individually installing each package</td>
+> </tr>
+> </tbody>
+> </table>
 
-## Configuration
+## Installation
 1. Verify that conda is installed
      ```
      conda --version
      ```
-     > [!NOTE]
-     > If you get an error message, close and reopen your terminal window after installing and try again
 2. Ensure conda is up to date
      ```
      conda update conda
@@ -78,12 +76,12 @@
      ```
      conda activate grovers_env
      ```
-7. Confirm that the virtual environment is active
+7. Confirm that the virtual environment (`grovers_env`) is active
      * If active, the virtual environment's name (`grovers_env`) should be in parentheses () or brackets [] before your command prompt, e.g.
           ```
           (grovers_env) $
           ```
-     * Else, check which environments are available and/or currently active (the active environment will have an asterisk (*) next to it)
+     * If necessary, see which environments are available and/or currently active (active environment denoted with asterisk (*))
           ```
           conda info --envs
           ```
@@ -100,7 +98,7 @@
 2. Search and select `Python: Select Interpreter`
 3. Select the virtual environment (`grovers_env`)
 4. Open `Grovers-Algorithm.ipynb`
-5. Click `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
+5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 6. Click `Run All` to run all cells
 7. Deactivate the virtual environment (`grovers_env`) when you're finished
      ```
@@ -108,7 +106,7 @@
      ```
 
 ### Jupyter Notebook
-1. After creating and activating the virtual environment (`grovers_env`) as described in [Configuration](#configuration), install `ipykernel` in the virtual environment (`grovers_env`)
+1. After creating and activating the virtual environment (`grovers_env`) as detailed in [Installation](#installation), install `ipykernel` in the virtual environment (`grovers_env`)
      ```
      conda install -n grovers_env ipykernel
      ```
