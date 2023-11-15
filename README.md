@@ -6,150 +6,130 @@
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
 
 ## Requirements
-- [x] [Python 3.7 – 3.11](https://www.python.org/downloads)
-- [x] [Pip](https://pip.pypa.io/en/stable/installation)
-- [x] [Jupyter](https://docs.jupyter.org/en/latest/install/notebook-classic.html)
-- [x] [Qiskit](https://qiskit.org/documentation/getting_started.html)
-
-## Configuration (Optional)
-> [!IMPORTANT]
-> It's highly recommended that you set up a [virtual environment](https://docs.python.org/3.11/tutorial/venv.html) before using pip
-1. Create your virtual environment
-      * UNIX
-      ```
-      python -m venv /path/to/virtual/environment
-      ```
-      * Windows
-      ```
-      python -m venv c:\path\to\virtual\environment
-      ```
-     > [!NOTE]
-     > * If `python` doesn't work, try using `python3`
-     > * If you haven't configured `PATH` and `PATHEXT` in Windows, replace `python` with the following command's output
-     > ```
-     > where python
-     > ```
-1. Activate your virtual environment
-     <table>
+- [x] [Python](https://www.python.org/downloads)
+- [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
+     > [!IMPORTANT]
+     > If you have trouble deciding whether you want to install Anaconda or Miniconda, please refer to the table below
+     > <table>
      <thead>
-     <tr><th>Platform</th>
-     <th>Shell</th>
-     <th>Command</th>
+     <tr>
+     <th><center>Anaconda</center></th>
+     <th><center>Miniconda</center></th>
      </tr>
      </thead>
      <tbody>
-     <tr><td rowspan="4">POSIX</td>
-     <td>bash/zsh</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     source /path/to/virtual/environment/bin/activate
-     ```
-     </p></td>
+     <tr>
+     <td>Don't want to individually install each package you want to use</td>
+     <td>Don't mind individually installing each package you want to use</td>
      </tr>
-     <tr><td>fish</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     source /path/to/virtual/environment/bin/activate.fish
-     ```
-     </p></td>
+     <tr>
+     <td>Like the convenience of having Python and 1,500+ scientific packages automatically installed at once</td>
+     <td>Want fast access to Python and the conda commands and you wish to sort out the other programs later</td>
      </tr>
-     <tr><td>csh/tcsh</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     source /path/to/virtual/environment/bin/activate.csh
-     ```
-     </p></td>
+     <tr>
+     <td>Have the time and disk space — a few minutes and 3 GB</td>
+     <td>Don't have the time or disk space to install 1,500+ packages at once</td>
      </tr>
-     <tr><td>PowerShell</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     source /path/to/virtual/environment/bin/Activate.ps1
-     ```
-     </p></td>
-     </tr>
-     <tr><td rowspan="2">Windows</td>
-     <td>cmd.exe</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     c:\path\to\virtual\environment\Scripts\activate.bat
-     ```
-     </p></td>
-     </tr>
-     <tr><td>PowerShell</td>
-     <td><p style="margin-bottom: 0px">
-
-     ```
-     c:\path\to\virtual\environment\Scripts\Activate.ps1
-     ```
-     </p></td>
+     <tr>
+     <td>Are new to conda or Python</td>
+     <td>Are familiar with conda or Python</td>
      </tr>
      </tbody>
      </table>
 
-## Installation
-> [!IMPORTANT]
-> Jupyter and Qiskit installation requires Python 3.7+
-1. Pip
-     * If you haven't already, install pip via Python's [`ensurepip`](https://docs.python.org/3/library/ensurepip.html) module
+## Configuration
+1. Verify that conda is installed
      ```
-     python -m ensurepip --upgrade
-     ```
-     * If you already have pip, ensure you have the latest version
-     ```
-     pip install --upgrade pip
-     ```
-2. Install/update Jupyter and Qiskit
-     ```
-     pip install --upgrade jupyter qiskit qiskit[visualization] qiskit-aer
-     ```
-     > [!WARNING]
-     > If you're using zsh, you'll need to put `qiskit[visualization]` in quotes
-3. If the packages were installed/updated correctly, the latest version of Jupyter and Qiskit should show up in your virtual environment's active packages list
-     ```
-     pip list
+     conda --version
      ```
      > [!NOTE]
-     > If `pip` doesn't work, try using `pip3` and/or adding `python -m` or `python3 -m` before `pip`
-4. Download `Grovers-Algorithm.ipynb`
+     > If you get an error message, close and reopen your terminal window after installing and try again
+2. Ensure conda is up to date
+     ```
+     conda update conda
+     ```
+3. Enter the directory where you want the repository (`grovers-algorithm`) to be cloned
+     * Unix
+          ```
+          cd ~/path/to/directory
+          ```
+     * Windows
+          ```
+          cd C:\Users\user\path\to\directory
+          ```
+4. Clone the repository (`grovers-algorithm`)
+     * HTTPS (Recommended)
+          ```
+          git clone https://github.com/lynkos/grovers-algorithm.git
+          ```
+     * SSH
+          ```
+          git clone git@github.com:lynkos/grovers-algorithm.git
+          ```
+     * GitHub CLI
+          ```
+          gh repo clone lynkos/grovers-algorithm
+          ```
+5. Create a conda virtual environment from `environment.yml`
+     ```
+     conda env create -f environment.yml
+     ```
+6. Activate the virtual environment (`grovers_env`)
+     ```
+     conda activate grovers_env
+     ```
+7. Confirm that the virtual environment is active
+     * If active, the virtual environment's name (`grovers_env`) should be in parentheses () or brackets [] before your command prompt, e.g.
+          ```
+          (grovers_env) $
+          ```
+     * Else, check which environments are available and/or currently active (the active environment will have an asterisk (*) next to it)
+          ```
+          conda info --envs
+          ```
+          **OR**
+          ```
+          conda env list
+          ```
 
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
-1. Open Visual Studio Code
-    * If you downloaded [Anaconda](https://www.anaconda.com/download), open `Anaconda Navigator`, scroll down to `VS Code`, then click `Launch`
-    * If not, open [Visual Studio Code](https://code.visualstudio.com/download) as you normally do
-2. Set up a [virtual environment](https://py-vscode.readthedocs.io/en/latest/files/venv.html), if you haven't already
-3. Open the Command Palette with the relevant keyboard shortcut
+1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
     * `⌘ + Shift + P` for Mac
     * `CTRL + Shift + P` for Windows
-4. Search and select `Python: Select Interpreter`
-5. Select your virtual environment
-6. Open `Grovers-Algorithm.ipynb`
-7. Click `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
-8. Click `Run All` to run all cells
-9. Deactivate your virtual environment when you're finished
+2. Search and select `Python: Select Interpreter`
+3. Select the virtual environment (`grovers_env`)
+4. Open `Grovers-Algorithm.ipynb`
+5. Click `Select Kernel` and choose a [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
+6. Click `Run All` to run all cells
+7. Deactivate the virtual environment (`grovers_env`) when you're finished
      ```
-     deactivate
+     conda deactivate
      ```
 
 ### Jupyter Notebook
-1. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
+1. After creating and activating the virtual environment (`grovers_env`) as described in [Configuration](#configuration), install `ipykernel` in the virtual environment (`grovers_env`)
+     ```
+     conda install -n grovers_env ipykernel
+     ```
+2. Add the virtual environment (`grovers_env`) as a Jupyter kernel
+     ```
+     python -m ipykernel install --user --name=grovers_env
+     ```
+3. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
      ```
      jupyter notebook Grovers-Algorithm.ipynb
      ```
-2. Run `Grovers-Algorithm.ipynb`
+4. Select the virtual environment (`grovers_env`) as the kernel before running `Grovers-Algorithm.ipynb`
+5. Deactivate the virtual environment (`grovers_env`) when you're finished
      ```
-     jupyter run Grovers-Algorithm.ipynb
+     conda deactivate
      ```
 
 ## Resources
 * [Anaconda Documentation](https://docs.anaconda.com)
-* [Anaconda Distribution Documentation](https://docs.continuum.io/free/anaconda)
 * [Conda Documentation](https://docs.conda.io/en/latest)
+* [Getting Started with Conda](https://conda.io/projects/conda/en/latest/user-guide/getting-started.html)
 * [Jupyter Notebook Documentation](https://jupyter-notebook.readthedocs.io/en/latest)
 * [Jupyter Project Documentation](https://docs.jupyter.org/en/latest/index.html) [[PDF](https://buildmedia.readthedocs.org/media/pdf/jupyter/latest/jupyter.pdf)]
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
