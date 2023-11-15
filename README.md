@@ -1,5 +1,5 @@
 # Grover's Algorithm
-![](https://img.shields.io/static/v1?label=Language&style=flat&message=Python+3.10.9&logo=python&color=c7a228&labelColor=393939&logoColor=4f97d1)
+![](https://img.shields.io/static/v1?label=Language&style=flat&message=Python+3.10.13&logo=python&color=c7a228&labelColor=393939&logoColor=4f97d1)
 ![](https://img.shields.io/static/v1?label=Packages&style=flat&message=Jupyter+Notebook&logo=jupyter&color=f37626&labelColor=393939&logoColor=f37626)
 ![](https://img.shields.io/static/v1?label=Packages&style=flat&message=Qiskit&logo=qiskit&color=6929c4&labelColor=393939&logoColor=af7afa)
 ![](https://img.shields.io/static/v1?label=Kernel&style=flat&message=Anaconda+3&logo=anaconda&color=44a833&labelColor=393939&logoColor=44a833)
