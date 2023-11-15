@@ -93,8 +93,14 @@
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
 1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
-    * `⌘ + Shift + P` for Mac
-    * `CTRL + Shift + P` for Windows
+    * Mac
+      ```
+      ⌘ + Shift + P
+      ```
+    * Windows
+      ```
+      CTRL + Shift + P
+      ```
 2. Search and select `Python: Select Interpreter`
 3. Select the virtual environment (`grovers_env`)
 4. Open `Grovers-Algorithm.ipynb`
