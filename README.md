@@ -146,4 +146,4 @@ For all questions, bugs, suggestions, etc. relating to this project, please crea
 <sup>Note: Timely response is not guaranteed!</sup>
 
 ## License
-Distributed under the [MIT License](https://github.com/lynkos/grovers-algorithm/blob/main/LICENSE.md), Copyright © 2023 Kiran Brahmatewari
+Distributed under the [MIT License](LICENSE.md), Copyright © 2023 Kiran Brahmatewari
