@@ -5,6 +5,14 @@
 ![](https://img.shields.io/static/v1?label=Kernel&style=flat&message=Anaconda+3&logo=anaconda&color=44a833&labelColor=393939&logoColor=44a833)
 ![](https://img.shields.io/static/v1?label=IDE&style=flat&message=Visual+Studio+Code&logo=visual+studio+code&color=007acc&labelColor=393939&logoColor=007acc)
 
+---
+
+<p align="center">
+ :star::star::star: Please <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">star</a> this repo if you find it helpful, interesting, or useful! :star::star::star:
+</p>
+
+---
+
 ## Requirements
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
 > [!NOTE]
@@ -136,9 +144,6 @@ For all questions, bugs, suggestions, etc. relating to this project, please crea
 <a href="https://twitter.com/0xLynkos" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Twitter.svg" width="31px" height="27px" alt="Twitter" /></a>&nbsp; <a href="mailto:kiwi2mii@gmail.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" width="28px" height="28px" alt="Gmail" /></a> &nbsp; <a href="https://www.linkedin.com/in/kiran-brahmatewari" target="_blank"><img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" width="28px" height="28px" alt="LinkedIn" /></a>
 
 <sup>Note: Timely response is not guaranteed!</sup>
-
-## Show Support
-Please :star: [star](https://github.com/lynkos/grovers-algorithm) :star: this repo if you find it helpful or useful!
 
 ## License
 Distributed under the [MIT License](https://github.com/lynkos/grovers-algorithm/blob/main/LICENSE.md), Copyright © 2023 Kiran Brahmatewari
