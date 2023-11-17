@@ -34,7 +34,7 @@
 > <td>Want fast access to Python and the conda commands and plan to sort out the other programs later</td>
 > </tr>
 > <tr>
-> <td>Have the time and space — a few minutes and 3 GB</td>
+> <td>Have the time and space (a few minutes and 3 GB)</td>
 > <td>Don't have the time or space to install 1,500+ packages</td>
 > </tr>
 > <tr>
