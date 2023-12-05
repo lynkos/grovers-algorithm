@@ -17,7 +17,7 @@
 ---
 
 <p align="center">
- :star::star::star: Please <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">star</a> this repo if you find it helpful, interesting, or useful! :star::star::star:
+ ⭐️⭐️⭐️ Please <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">star</a> this repo if you find it helpful, interesting, or useful! ⭐️⭐️⭐️
 </p>
 
 ---
@@ -110,16 +110,29 @@
       ```
 2. Search and select `Python: Select Interpreter`
 3. Select the virtual environment (`grovers_env`)
-4. Open `Grovers-Algorithm.ipynb`
+4. Open `Grovers-Algorithm.ipynb` and/or `Grovers-Algorithm.py`
 5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
-6. Click `Run All` to run all cells
+6. Run program(s)
+   * `Grovers-Algorithm.ipynb`: Click `Run All`
+   * `Grovers-Algorithm.py`: Click `▷` (i.e. `Play` button) in the upper-right corner
 7. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
    ```
 
-### Jupyter Notebook
-1. After creating and activating the virtual environment (`grovers_env`) as detailed in [Installation](#installation), install `ipykernel` in the virtual environment (`grovers_env`)
+### Command Line
+#### Python
+1. Run `Grovers-Algorithm.py`
+   ```
+   $(conda info --base)/envs/grovers_env/bin/python Grovers-Algorithm.py
+   ```
+2. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+#### Jupyter Notebook
+1. Install `ipykernel` in the virtual environment (`grovers_env`)
    ```
    conda install -n grovers_env ipykernel
    ```

@@ -5,6 +5,8 @@ dependencies:
   - python=3.10.13
   - jupyter
   - matplotlib
+  - matplotlib-base
+  - matplotlib-inline
   - pip
   - pip:
     - qiskit
