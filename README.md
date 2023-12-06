@@ -1,5 +1,5 @@
-# Grover's Algorithm
 <div align="center">
+<h1>Grover's Algorithm</h1>
 <img alt="Python" src="https://img.shields.io/static/v1?label=Language&style=flat&message=Python+3.10.13&logo=python&color=c7a228&labelColor=393939&logoColor=4f97d1">
 <img alt="Jupyter" src="https://img.shields.io/static/v1?label=Packages&style=flat&message=Jupyter+Notebook&logo=jupyter&color=f37626&labelColor=393939&logoColor=f37626">
 <img alt="Qiskit" src="https://img.shields.io/static/v1?label=Packages&style=flat&message=Qiskit&logo=qiskit&color=6929c4&labelColor=393939&logoColor=af7afa">
