@@ -23,14 +23,14 @@ def print_circuit(circuit: qc, name: str = "") -> None:
         circuit (qc): Quantum circuit to print.
         name (str, optional): Quantum circuit's name. Defaults to "".
     """
-    if name: print(f"\n{name}:")
-    print(f"\n{circuit}")
+    print(f"\n{name}:" if name else "")
+    print(f"{circuit}")
 
-def oracle(targets: set[str], name: str = "Oracle", display_oracle: bool = True) -> qc:
+def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bool = True) -> qc:
     """Mark target state(s) with negative phase.
 
     Args:
-        targets (set[str]): N-qubit binary string(s) representing target state(s).
+        targets (set[str]): N-qubit binary string(s) representing target state(s). Defaults to TARGETS.
         name (str, optional): Quantum circuit's name. Defaults to "Oracle".
         display_oracle (bool, optional): Whether or not to display oracle. Defaults to True.
 
@@ -80,7 +80,7 @@ def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> qc:
     diffuser = qc(QUBITS, name = name)
     
     diffuser.h(QUBITS)                          # Hadamard gate
-    diffuser.append(oracle(["0" * N]), QUBITS)  # Oracle with all zero target state
+    diffuser.append(oracle({"0" * N}), QUBITS)  # Oracle with all zero target state
     diffuser.h(QUBITS)                          # Hadamard gate
 
     # Display diffuser, if applicable
@@ -89,7 +89,7 @@ def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> qc:
     
     return diffuser
 
-def grover(oracle: qc = oracle(TARGETS), diffuser: qc = diffuser(), name: str = "Grover Circuit", display_grover: bool = True) -> qc:
+def grover(oracle: qc = oracle(), diffuser: qc = diffuser(), name: str = "Grover Circuit", display_grover: bool = True) -> qc:
     """Create quantum circuit representation of Grover's algorithm,
     which consists of 4 parts: (1) state preparation/initialization,
     (2) oracle, (3) diffuser, and (4) measurement of resulting state.
@@ -98,7 +98,7 @@ def grover(oracle: qc = oracle(TARGETS), diffuser: qc = diffuser(), name: str = 
     iterate) in order to maximize probability of success of Grover's algorithm.
 
     Args:
-        oracle (qc, optional): Quantum circuit representation of oracle. Defaults to oracle(TARGETS).
+        oracle (qc, optional): Quantum circuit representation of oracle. Defaults to oracle().
         diffuser (qc, optional): Quantum circuit representation of diffuser. Defaults to diffuser().
         name (str, optional): Quantum circuit's name. Defaults to "Grover Circuit".
         display_grover (bool, optional): Whether or not to display grover circuit. Defaults to True.
