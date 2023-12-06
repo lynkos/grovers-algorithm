@@ -1,19 +1,20 @@
 from qiskit import QuantumCircuit as qc
 from qiskit import QuantumRegister as qr
 from qiskit import execute
-from matplotlib.pyplot import show, text, subplots
+from matplotlib.pyplot import show, subplots, xticks, yticks
 from qiskit_aer import Aer
 from math import pi, sqrt
 from heapq import nlargest
 
 """Feel free to modify the following constants"""
-N = 5                          # Number of qubits
-SEARCH_VALUES = {9, 0, 3, 19}  # Set of m nonnegative integers to search for using Grover's algorithm (i.e. TARGETS in base 10)
-SHOTS = 10000                  # Amount of times the algorithm is simulated
+N: int = 5                               # Number of qubits
+SEARCH_VALUES: set[int] = {11, 9, 0, 3}  # Set of m nonnegative integers to search for using Grover's algorithm (i.e. TARGETS in base 10)
+SHOTS: int = 10000                       # Amount of times the algorithm is simulated
+FONTSIZE: int = 10                       # Font size of histogram text
 
 """Please do not modify the following constants, otherwise you risk breaking the program"""
-TARGETS = {f"{s:0{N}b}" for s in SEARCH_VALUES}  # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
-QUBITS = qr(N, "q")                              # N-qubit quantum register
+TARGETS: set[str] = {f"{s:0{N}b}" for s in SEARCH_VALUES}  # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
+QUBITS: qr = qr(N, "q")                                    # N-qubit quantum register
 
 def print_circuit(circuit: qc, title: str = "") -> None:
     print(f"\n{title}:\n")
@@ -141,34 +142,90 @@ def outcome(winners_dict: dict[str, int]) -> None:
           if all(winner in TARGETS for winner in [*winners_dict])
           else "Target(s) not found...\n")
 
-def bar_graph(results: dict[str, int]) -> None:
+def display_results(results: dict[str, int], combine_other_states: bool = True) -> None:
     """
-    Generate and display histogram of simulation results.
+    Print outcome and display histogram of simulation results.
 
     Args:
         results (dict[str, int]): All state(s) (N-qubit binary string(s)) and its respective frequency.
+        combine_other_states (bool, optional): Whether to combine all non-winning states into 1 bar
+        labeled "Others". Defaults to True.
     """
-    # Histogram x-axis
-    x_axis = [str(winner) for winner in [*results]]
+    # Winners (i.e. state(s) with highest count) and their frequencies
+    winners = {winner : results.get(winner) for winner in nlargest(len(TARGETS), results, key = results.get)}
 
-    # Histogram y-axis
-    y_axis = [*results.values()]
+    # Print outcome
+    outcome(winners)
+
+    # X-axis and y-axis for winners respectively
+    winners_x_axis = [str(winner) for winner in [*winners]]
+    winners_y_axis = [*winners.values()]
+
+    # All other states
+    other_states = [state for state in set(results) - set([*winners])]
+
+    # X-axis and y-axis for all other states respectively
+    other_states_x_axis = "Others" if combine_other_states else other_states
+    other_states_y_axis = [sum([results.get(state) for state in other_states])] if combine_other_states else [results.get(state) for state in other_states]
 
     # Create histogram for simulation results
-    _, ax = subplots(num = "Simulation Results")
-    ax.bar(x_axis, y_axis, color = ["green" if key in TARGETS else "red" for key in x_axis])
+    fig, axes = subplots(num = "Grover's Algorithm — Results", layout = "constrained")
+    axes.bar(winners_x_axis, winners_y_axis, color = "green", label = "Target")
+    axes.bar(other_states_x_axis, other_states_y_axis, color = "red", label = "Non-target")
+    axes.legend(fontsize = FONTSIZE)
+    axes.grid(axis = "y", ls = "dashed")
+    axes.set_axisbelow(True)
 
-    # Set histogram title, x-axis label, and y-axis label respectively
-    ax.set_title("Simulation Results")
-    ax.set_xlabel("States (Qubits)")
-    ax.set_ylabel("Frequency")
+    # Set histogram title, x-axis title, and y-axis title respectively
+    axes.set_title(f"Outcome of {SHOTS} Simulations", fontsize = int(FONTSIZE * 1.45))
+    axes.set_xlabel("States (Qubits)", fontsize = int(FONTSIZE * 1.3))
+    axes.set_ylabel("Frequency", fontsize = int(FONTSIZE * 1.3))
+
+    # Set font properties for x-axis and y-axis labels respectively
+    xticks(fontsize = FONTSIZE, family = "monospace", rotation = 0 if combine_other_states else 70)
+    yticks(fontsize = FONTSIZE, family = "monospace")
     
-    # Display frequency above each bar
-    for index, frequency in enumerate(y_axis):
-        text(index, frequency, str(frequency), weight = "bold", ha = "center", va = "bottom")
+    # Set properties for annotations displaying frequency above each bar
+    annotation = axes.annotate("",
+                               xy = (0, 0),
+                               xytext = (5, 5),
+                               xycoords = "data",
+                               textcoords = "offset pixels",
+                               ha = "center",
+                               va = "bottom",
+                               family = "monospace",
+                               weight = "bold",
+                               fontsize = FONTSIZE,
+                               bbox = dict(facecolor = "white", alpha = 0.4, edgecolor = "None", pad = 0)
+                               )
     
+    def hover(event):
+        """
+        Display frequency above each bar upon hovering over it.
+
+        Args:
+            event (Event): Matplotlib event.
+        """
+        visibility = annotation.get_visible()
+        if event.inaxes == axes:
+            for container in axes.containers:
+                for bar in container:
+                    cont, _ = bar.contains(event)
+                    if cont:
+                        x, y = bar.get_x() + bar.get_width() / 2, bar.get_y() + bar.get_height()
+                        annotation.xy = (x, y)
+                        annotation.set_text(y)
+                        annotation.set_visible(True)
+                        fig.canvas.draw_idle()
+                        return
+        if visibility:
+            annotation.set_visible(False)
+            fig.canvas.draw_idle()
+        
     # Display histogram
+    id = fig.canvas.mpl_connect("motion_notify_event", hover)
     show()
+    fig.canvas.mpl_disconnect(id)
 
 if __name__ == "__main__":
     # Generate quantum circuit for Grover's algorithm 
@@ -177,21 +234,5 @@ if __name__ == "__main__":
     # Simulate Grover's algorithm with grover_circuit SHOTS times and get results
     results = execute(grover_circuit, backend = Aer.get_backend("qasm_simulator"), shots = SHOTS).result()
 
-    # Get each state's frequency
-    counts = results.get_counts()
-
-    # Create dictionary to store winners (i.e. state(s) with highest count) and their frequencies
-    winners_dict = { }
-
-    # Populate winners_dict
-    for winner in nlargest(len(TARGETS), counts, key = counts.get):
-        winners_dict[winner] = counts.get(winner)
-
-    # Print outcome
-    outcome(winners_dict)
-
-    # Add frequency of all other states to winners_dict
-    winners_dict["All Other States"] = sum([counts.get(other_states) for other_states in set(counts) - set([*winners_dict])])
-
-    # Display simulation results as histogram
-    bar_graph(winners_dict)
+    # Get each state's frequency and display simulation results
+    display_results(results.get_counts())

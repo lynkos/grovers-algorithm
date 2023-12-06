@@ -123,9 +123,14 @@
 ### Command Line
 #### Python
 1. Run `Grovers-Algorithm.py`
-   ```
-   $(conda info --base)/envs/grovers_env/bin/python Grovers-Algorithm.py
-   ```
+   * UNIX
+      ```
+      $(which python) Grovers-Algorithm.py
+      ```
+   * Windows
+      ```
+      $(where python) Grovers-Algorithm.py
+      ```
 2. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
