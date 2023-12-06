@@ -212,8 +212,8 @@ def display_results(results: dict[str, int], combine_other_states: bool = True) 
         """
         visibility = annotation.get_visible()
         if event.inaxes == axes:
-            for container in axes.containers:
-                for bar in container:
+            for bars in axes.containers:
+                for bar in bars:
                     cont, _ = bar.contains(event)
                     if cont:
                         x, y = bar.get_x() + bar.get_width() / 2, bar.get_y() + bar.get_height()
