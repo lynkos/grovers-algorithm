@@ -23,8 +23,8 @@ def print_circuit(circuit: qc, name: str = "") -> None:
         circuit (qc): Quantum circuit to print.
         name (str, optional): Quantum circuit's name. Defaults to "".
     """
-    print(f"\n{name}:\n")
-    print(circuit)
+    if name: print(f"\n{name}:")
+    print(f"\n{circuit}")
 
 def oracle(targets: set[str], name: str = "Oracle", display_oracle: bool = True) -> qc:
     """Mark target state(s) with negative phase.
@@ -138,7 +138,7 @@ def outcome(winners_dict: dict[str, int]) -> None:
         winners_dict (dict[str, int]): State(s) (N-qubit binary string(s)) with
         highest probability of being measured, and its respective frequency.
     """
-    print("WINNER(S):")
+    print("\nWINNER(S):")
     print(f"Binary = {[*winners_dict]}\nDecimal = {[int(winner, 2) for winner in [*winners_dict]]}\n")
         
     print("TARGET(S):")
