@@ -16,8 +16,15 @@ FONTSIZE: int = 10                       # Font size of histogram text
 TARGETS: set[str] = {f"{s:0{N}b}" for s in SEARCH_VALUES}  # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
 QUBITS: qr = qr(N, "q")                                    # N-qubit quantum register
 
-def print_circuit(circuit: qc, title: str = "") -> None:
-    print(f"\n{title}:\n")
+def print_circuit(circuit: qc, name: str = "") -> None:
+    """
+    Print quantum circuit.
+
+    Args:
+        circuit (qc): Quantum circuit to print.
+        name (str, optional): Quantum circuit's name. Defaults to "".
+    """
+    print(f"\n{name}:\n")
     print(circuit)
 
 def oracle(targets: set[str], name: str = "Oracle", display_oracle: bool = True) -> qc:
