@@ -17,8 +17,7 @@ TARGETS: set[str] = {f"{s:0{N}b}" for s in SEARCH_VALUES}  # Set of m N-qubit bi
 QUBITS: qr = qr(N, "q")                                    # N-qubit quantum register
 
 def print_circuit(circuit: qc, name: str = "") -> None:
-    """
-    Print quantum circuit.
+    """Print quantum circuit.
 
     Args:
         circuit (qc): Quantum circuit to print.
@@ -150,8 +149,7 @@ def outcome(winners_dict: dict[str, int]) -> None:
           else "Target(s) not found...\n")
 
 def display_results(results: dict[str, int], combine_other_states: bool = True) -> None:
-    """
-    Print outcome and display histogram of simulation results.
+    """Print outcome and display histogram of simulation results.
 
     Args:
         results (dict[str, int]): All state(s) (N-qubit binary string(s)) and its respective frequency.
@@ -207,8 +205,7 @@ def display_results(results: dict[str, int], combine_other_states: bool = True) 
                                )
     
     def hover(event):
-        """
-        Display frequency above each bar upon hovering over it.
+        """Display frequency above each bar upon hovering over it.
 
         Args:
             event (Event): Matplotlib event.
