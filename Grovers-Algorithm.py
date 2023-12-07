@@ -204,7 +204,7 @@ def display_results(results: dict[str, int], combine_other_states: bool = True) 
                                bbox = dict(facecolor = "white", alpha = 0.4, edgecolor = "None", pad = 0)
                                )
     
-    def hover(event):
+    def hover(event) -> None:
         """Display frequency above each bar upon hovering over it.
 
         Args:
