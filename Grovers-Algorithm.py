@@ -154,27 +154,27 @@ def display_results(results: dict[str, int], combine_other_states: bool = True) 
     Args:
         results (dict[str, int]): All state(s) (N-qubit binary string(s)) and its respective frequency.
         combine_other_states (bool, optional): Whether to combine all non-winning states into 1 bar
-        labeled "Others". Defaults to True.
+        labeled "Others" or not. Defaults to True.
     """
-    # Winners (i.e. state(s) with highest count) and their frequencies
+    # State(s) with highest count and their frequencies
     winners = {winner : results.get(winner) for winner in nlargest(len(TARGETS), results, key = results.get)}
 
     # Print outcome
     outcome(winners)
 
-    # X-axis and y-axis for winners respectively
+    # X-axis and y-axis value(s) for winners, respectively
     winners_x_axis = [str(winner) for winner in [*winners]]
     winners_y_axis = [*winners.values()]
 
-    # All other states
-    other_states = [state for state in set(results) - set([*winners])]
+    # All other states (i.e. non-winners) and their frequencies
+    others = {state : frequency for state, frequency in results.items() if state not in winners}
 
-    # X-axis and y-axis for all other states respectively
-    other_states_x_axis = "Others" if combine_other_states else other_states
-    other_states_y_axis = [sum([results.get(state) for state in other_states])] if combine_other_states else [results.get(state) for state in other_states]
+    # X-axis and y-axis value(s) for all other states, respectively
+    other_states_x_axis = "Others" if combine_other_states else [*others]
+    other_states_y_axis = [sum([*others.values()])] if combine_other_states else [*others.values()]
 
     # Create histogram for simulation results
-    fig, axes = subplots(num = "Grover's Algorithm — Results", layout = "constrained")
+    figure, axes = subplots(num = "Grover's Algorithm — Results", layout = "constrained")
     axes.bar(winners_x_axis, winners_y_axis, color = "green", label = "Target")
     axes.bar(other_states_x_axis, other_states_y_axis, color = "red", label = "Non-target")
     axes.legend(fontsize = FONTSIZE)
@@ -220,16 +220,16 @@ def display_results(results: dict[str, int], combine_other_states: bool = True) 
                         annotation.xy = (x, y)
                         annotation.set_text(y)
                         annotation.set_visible(True)
-                        fig.canvas.draw_idle()
+                        figure.canvas.draw_idle()
                         return
         if visibility:
             annotation.set_visible(False)
-            fig.canvas.draw_idle()
+            figure.canvas.draw_idle()
         
     # Display histogram
-    id = fig.canvas.mpl_connect("motion_notify_event", hover)
+    id = figure.canvas.mpl_connect("motion_notify_event", hover)
     show()
-    fig.canvas.mpl_disconnect(id)
+    figure.canvas.mpl_disconnect(id)
 
 if __name__ == "__main__":
     # Generate quantum circuit for Grover's algorithm 
