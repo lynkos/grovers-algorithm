@@ -129,23 +129,23 @@ def grover(oracle: qc = oracle(), diffuser: qc = diffuser(), name: str = "Grover
     
     return grover
 
-def outcome(winners_dict: dict[str, int]) -> None:
+def outcome(winners: dict[str, int]) -> None:
     """Print top measurement(s) (state(s) with highest frequency)
     and target state(s) in binary and decimal form, determine
     if top measurement(s) equals target state(s), then print result.
 
     Args:
-        winners_dict (dict[str, int]): State(s) (N-qubit binary string(s)) with
+        winners (dict[str, int]): State(s) (N-qubit binary string(s)) with
         highest probability of being measured, and its respective frequency.
     """
     print("\nWINNER(S):")
-    print(f"Binary = {[*winners_dict]}\nDecimal = {[int(winner, 2) for winner in [*winners_dict]]}\n")
+    print(f"Binary = {[*winners]}\nDecimal = {[int(winner, 2) for winner in [*winners]]}\n")
         
     print("TARGET(S):")
     print(f"Binary = {TARGETS}\nDecimal = {SEARCH_VALUES}\n")
     
-    print(f"Target(s) found with {sum(winners_dict.values()) / SHOTS:.2%} accuracy!\n"
-          if all(winner in TARGETS for winner in [*winners_dict])
+    print(f"Target(s) found with {sum(winners.values()) / SHOTS:.2%} accuracy!\n"
+          if all(winner in TARGETS for winner in [*winners])
           else "Target(s) not found...\n")
 
 def display_results(results: dict[str, int], combine_other_states: bool = True) -> None:
