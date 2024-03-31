@@ -1,21 +1,25 @@
 from qiskit import QuantumCircuit as qc
 from qiskit import QuantumRegister as qr
-from qiskit import execute
-from qiskit.circuit import Instruction
-from qiskit_aer import Aer
+from qiskit import transpile
+from qiskit.providers import Backend
+from qiskit.result import Counts
+from qiskit_ibm_runtime import QiskitRuntimeService
 from matplotlib.pyplot import show, subplots, xticks, yticks
+from matplotlib.backend_bases import MouseEvent
 from math import pi, sqrt
 from heapq import nlargest
 
-"""Feel free to modify the following constants"""
-N: int = 5                               # Number of qubits
-SEARCH_VALUES: set[int] = {11, 9, 0, 3}  # Set of m nonnegative integers to search for using Grover's algorithm (i.e. TARGETS in base 10)
-SHOTS: int = 10000                       # Amount of times the algorithm is simulated
-FONTSIZE: int = 10                       # Font size of histogram text
+"""Feel free to modify the following constants."""
+N: int = 5                                # Number of qubits
+SEARCH_VALUES: set[int] = { 11, 9, 0, 3 } # Set of m nonnegative integers to search for using Grover's algorithm (i.e. TARGETS in base 10)
+SHOTS: int = 10000                        # Amount of times the algorithm is simulated
+FONTSIZE: int = 10                        # Histogram's font size
 
-"""Please do not modify the following constants, otherwise you risk breaking the program"""
-TARGETS: set[str] = {f"{s:0{N}b}" for s in SEARCH_VALUES}  # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
-QUBITS: qr = qr(N, "qubit")                                # N-qubit quantum register
+"""Please do not modify the following constants, otherwise you risk breaking the program."""
+TARGETS: set[str] = { f"{s:0{N}b}" for s in SEARCH_VALUES }     # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
+QUBITS: qr = qr(N, "qubit")                                     # N-qubit quantum register
+BACKEND_NAME: str = "ibmq_qasm_simulator"                       # Name of backend to run the algorithm on
+BACKEND: Backend = QiskitRuntimeService().backend(BACKEND_NAME) # Backend to run the algorithm on
 
 def print_circuit(circuit: qc, name: str = "") -> None:
     """Print quantum circuit.
@@ -27,7 +31,7 @@ def print_circuit(circuit: qc, name: str = "") -> None:
     print(f"\n{name}:" if name else "")
     print(f"{circuit}")
 
-def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bool = True) -> Instruction:
+def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bool = True) -> qc:
     """Mark target state(s) with negative phase.
 
     Args:
@@ -36,7 +40,7 @@ def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bo
         display_oracle (bool, optional): Whether or not to display oracle. Defaults to True.
 
     Returns:
-        Instruction: Instructions for quantum circuit representation of oracle.
+        qc: Quantum circuit representation of oracle.
     """
     # Create N-qubit quantum circuit for oracle
     oracle = qc(QUBITS, name = name)
@@ -61,12 +65,11 @@ def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bo
                 oracle.x(i)                    # Pauli-X gate
 
     # Display oracle, if applicable
-    if display_oracle:
-        print_circuit(oracle, "ORACLE")
+    if display_oracle: print_circuit(oracle, "ORACLE")
 
-    return oracle.to_instruction()
+    return oracle
 
-def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> Instruction:
+def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> qc:
     """Amplify target state(s) amplitude, which decreases the amplitudes of other states
     and increases the probability of getting the correct solution (i.e. target state(s)).
 
@@ -75,7 +78,7 @@ def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> Instructi
         display_diffuser (bool, optional): Whether or not to display diffuser. Defaults to True.
 
     Returns:
-        Instruction: Instructions for quantum circuit representation of diffuser (i.e. Grover's diffusion operator).
+        qc: Quantum circuit representation of diffuser (i.e. Grover's diffusion operator).
     """
     # Create N-qubit quantum circuit for diffuser
     diffuser = qc(QUBITS, name = name)
@@ -85,12 +88,11 @@ def diffuser(name: str = "Diffuser", display_diffuser: bool = True) -> Instructi
     diffuser.h(QUBITS)                                  # Hadamard gate
     
     # Display diffuser, if applicable
-    if display_diffuser:
-        print_circuit(diffuser, "DIFFUSER")
+    if display_diffuser: print_circuit(diffuser, "DIFFUSER")
     
-    return diffuser.to_instruction()
+    return diffuser
 
-def grover(name: str = "Grover Circuit", display_grover: bool = True) -> qc:
+def grover(oracle: qc = oracle(), diffuser: qc = diffuser(), name: str = "Grover Circuit", display_grover: bool = True) -> qc:
     """Create quantum circuit representation of Grover's algorithm,
     which consists of 4 parts: (1) state preparation/initialization,
     (2) oracle, (3) diffuser, and (4) measurement of resulting state.
@@ -99,8 +101,8 @@ def grover(name: str = "Grover Circuit", display_grover: bool = True) -> qc:
     iterate) in order to maximize probability of success of Grover's algorithm.
 
     Args:
-        oracle (Instruction, optional): Circuit instructions for quantum circuit representation of oracle. Defaults to oracle().
-        diffuser (Instruction, optional): Circuit instructions for quantum circuit representation of diffuser. Defaults to diffuser().
+        oracle (qc, optional): Quantum circuit representation of oracle. Defaults to oracle().
+        diffuser (qc, optional): Quantum circuit representation of diffuser. Defaults to diffuser().
         name (str, optional): Quantum circuit's name. Defaults to "Grover Circuit".
         display_grover (bool, optional): Whether or not to display grover circuit. Defaults to True.
 
@@ -118,62 +120,69 @@ def grover(name: str = "Grover Circuit", display_grover: bool = True) -> qc:
 
     # Apply oracle and diffuser (i.e. Grover operator) optimal number of times
     for _ in range(int((pi / 4) * sqrt((2 ** N) / len(TARGETS)))):
-        grover.append(oracle(), list(range(N)))
-        grover.append(diffuser(), list(range(N)))
+        grover.append(oracle, list(range(N)))
+        grover.append(diffuser, list(range(N)))
      
     # Measure all qubits once finished
     grover.measure_all()
 
     # Display grover circuit, if applicable
-    if display_grover:
-        print_circuit(grover, "GROVER CIRCUIT")
+    if display_grover: print_circuit(grover, "GROVER CIRCUIT")
     
     return grover
 
-def outcome(winners) -> None:
+def outcome(winners: list[str], counts: Counts) -> None:
     """Print top measurement(s) (state(s) with highest frequency)
     and target state(s) in binary and decimal form, determine
     if top measurement(s) equals target state(s), then print result.
 
     Args:
-        winners (dict[str, int]): State(s) (N-qubit binary string(s)) with
-        highest probability of being measured, and its respective frequency.
+        winners (list[str]): State(s) (N-qubit binary string(s))
+        with highest probability of being measured.
+        counts (Counts): Each state and its respective frequency.
     """
-    print("\nWINNER(S):")
-    print(f"Binary = {[*winners]}\nDecimal = {[int(winner, 2) for winner in [*winners]]}\n")
+    print("WINNER(S):")
+    print(f"Binary = {winners}\nDecimal = {[ int(key, 2) for key in winners ]}\n")
         
     print("TARGET(S):")
     print(f"Binary = {TARGETS}\nDecimal = {SEARCH_VALUES}\n")
-    
-    print(f"Target(s) found with {sum(winners.values()) / SHOTS:.2%} accuracy!\n"
-          if all(winner in TARGETS for winner in [*winners])
-          else "Target(s) not found...\n")
 
-def display_results(results, combine_other_states: bool = True) -> None:
+    if not all(key in TARGETS for key in winners): print("Target(s) not found...")
+
+    else:
+        winners_frequency, total = 0, 0
+
+        for value, frequency in counts.items():
+            if value in winners:
+                winners_frequency += frequency
+            total += frequency
+        
+        print(f"Target(s) found with {winners_frequency / total:.2%} accuracy!")
+
+def display_results(results: Counts, combine_other_states: bool = True) -> None:
     """Print outcome and display histogram of simulation results.
 
     Args:
-        results (dict[str, int]): All state(s) (N-qubit binary string(s)) and its respective frequency.
+        results (Counts): Each state and its respective frequency.
         combine_other_states (bool, optional): Whether to combine all non-winning states into 1 bar
         labeled "Others" or not. Defaults to True.
     """
-    
     # State(s) with highest count and their frequencies
-    winners = {winner : results.get(winner) for winner in nlargest(len(TARGETS), results, key = results.get)}
+    winners = { winner : results.get(winner) for winner in nlargest(len(TARGETS), results, key = results.get) }
 
     # Print outcome
-    outcome(winners)
+    outcome(list(winners.keys()), results)
 
     # X-axis and y-axis value(s) for winners, respectively
-    winners_x_axis = [str(winner) for winner in [*winners]]
-    winners_y_axis = [*winners.values()]
+    winners_x_axis = [ str(winner) for winner in [*winners] ]
+    winners_y_axis = [ *winners.values() ]
 
     # All other states (i.e. non-winners) and their frequencies
     others = {state : frequency for state, frequency in results.items() if state not in winners}
 
     # X-axis and y-axis value(s) for all other states, respectively
     other_states_x_axis = "Others" if combine_other_states else [*others]
-    other_states_y_axis = [sum([*others.values()])] if combine_other_states else [*others.values()]
+    other_states_y_axis = [ sum([*others.values()]) ] if combine_other_states else [ *others.values() ]
 
     # Create histogram for simulation results
     figure, axes = subplots(num = "Grover's Algorithm — Results", layout = "constrained")
@@ -206,11 +215,11 @@ def display_results(results, combine_other_states: bool = True) -> None:
                                bbox = dict(facecolor = "white", alpha = 0.4, edgecolor = "None", pad = 0)
                                )
     
-    def hover(event) -> None:
+    def hover(event: MouseEvent) -> None:
         """Display frequency above each bar upon hovering over it.
 
         Args:
-            event (Event): Matplotlib event.
+            event (MouseEvent): Matplotlib mouse event.
         """
         visibility = annotation.get_visible()
         if event.inaxes == axes:
@@ -237,8 +246,9 @@ if __name__ == "__main__":
     # Generate quantum circuit for Grover's algorithm 
     grover_circuit = grover()
 
-    # Simulate Grover's algorithm with grover_circuit SHOTS times and get results
-    results = execute(grover_circuit, backend = Aer.get_backend("qasm_simulator"), shots = SHOTS).result()
-    
+    # Simulate Grover's algorithm with a Qiskit backend and get results
+    with BACKEND.open_session() as session:
+        results = BACKEND.run(transpile(grover_circuit, BACKEND, optimization_level = 2), shots = SHOTS).result()
+
     # Get each state's frequency and display simulation results
     display_results(results.get_counts(), False)

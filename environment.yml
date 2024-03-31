@@ -2,16 +2,13 @@ name: grovers_env
 channels:
   - defaults
 dependencies:
-  - python=3.10.13
-  - jupyter
-  - matplotlib
-  - matplotlib-base
-  - matplotlib-inline
-  - pip
+  - python=3.12.2
+  - numpy=1.26.4
+  - pip>=23.3.1
   - pip:
-    - qiskit
-    - qiskit-aer
-    - qiskit-terra
-    - pylatexenc
-    - seaborn
-    - numpy
+    - qiskit==1.0.2
+    - qiskit_ibm_runtime==0.22.0
+    - pylatexenc==2.10
+    - seaborn==0.13.2
+    - matplotlib==3.8.3
+    - notebook==7.1.2
