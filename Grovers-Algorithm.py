@@ -15,7 +15,7 @@ SEARCH_VALUES: set[int] = { 11, 9, 0, 3 } # Set of m nonnegative integers to sea
 SHOTS: int = 10000                        # Amount of times the algorithm is simulated
 FONTSIZE: int = 10                        # Histogram's font size
 
-"""Please do not modify the following constants, otherwise you risk breaking the program."""
+"""Unless you know what you are doing, please do not modify the following constants, otherwise you risk breaking the program."""
 TARGETS: set[str] = { f"{s:0{N}b}" for s in SEARCH_VALUES }     # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
 QUBITS: qr = qr(N, "qubit")                                     # N-qubit quantum register
 BACKEND_NAME: str = "ibmq_qasm_simulator"                       # Name of backend to run the algorithm on
