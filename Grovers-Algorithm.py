@@ -52,17 +52,17 @@ def oracle(targets: set[str] = TARGETS, name: str = "Oracle", display_oracle: bo
         # Flip zero qubits in target
         for i in range(N):
             if target[i] == "0":
-                oracle.x(i)                    # Pauli-X gate
+                oracle.x(i)                   # Pauli-X gate
 
         # Simulate (N - 1)-control Z gate
-        oracle.h(N - 1)                        # Hadamard gate
-        oracle.mcx(list(range(N - 1)), N - 1)  # (N - 1)-control Toffoli gate
-        oracle.h(N - 1)                        # Hadamard gate
+        oracle.h(N - 1)                       # Hadamard gate
+        oracle.mcx(list(range(N - 1)), N - 1) # (N - 1)-control Toffoli gate
+        oracle.h(N - 1)                       # Hadamard gate
 
         # Flip back to original state
         for i in range(N):
             if target[i] == "0":
-                oracle.x(i)                    # Pauli-X gate
+                oracle.x(i)                   # Pauli-X gate
 
     # Display oracle, if applicable
     if display_oracle: print_circuit(oracle, "ORACLE")
