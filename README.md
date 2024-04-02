@@ -63,12 +63,12 @@
    conda update conda
    ```
 3. Enter the directory where you want the repository (`grovers-algorithm`) to be cloned
-     * Unix
-       ```
+     * POSIX
+       ```sh
        cd ~/path/to/directory
        ```
      * Windows
-       ```
+       ```sh
        cd C:\Users\user\path\to\directory
        ```
 4. Clone the repository (`grovers-algorithm`), then enter its directory
@@ -123,12 +123,12 @@
 ### Command Line
 #### Python
 1. Run `Grovers-Algorithm.py`
-   * UNIX
-      ```
+   * POSIX
+      ```sh
       $(which python) Grovers-Algorithm.py
       ```
    * Windows
-      ```
+      ```sh
       $(where python) Grovers-Algorithm.py
       ```
 2. Deactivate the virtual environment (`grovers_env`) when you're finished
