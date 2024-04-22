@@ -24,7 +24,7 @@
 
 ## Requirements
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
-> [!NOTE]
+> [!TIP]
 > If you have trouble deciding between Anaconda and Miniconda, please refer to the table below
 > <table>
 > <thead>
