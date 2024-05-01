@@ -97,6 +97,69 @@
        conda env list
        ```
 
+### Conda Shortcuts (Optional)
+Instead of manually typing out entire conda commands, you can save time by adding [this `.sh` script](conda_shortcuts.sh) to your shell startup file (e.g., `.bashrc`, etc.) and using it in your terminal.
+
+> [!WARNING]
+> These shortcut commands have **ONLY** been tested on `bash v5.2.26(1)-release` with `aarch64-apple-darwin23.2.0` architecture, so — just to be safe — test and make changes as needed.
+> 
+> E.g., [`rmenv`](conda_shortcuts.sh#L47) assumes the path delimeter is forward slash `/` (POSIX systems); if you use Windows (path delimeter is backslash `\`), replace forward slashes `/` in [`env_path`](conda_shortcuts.sh#L50) with backslashes `\`.
+
+<table>
+<thead>
+<tr>
+<th><center>Command</center></th>
+<th><center>Description</center></th>
+<th><center>Usage</center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L94"><code>act</code></a></td>
+<td>Activate conda environment</td>
+<td><code>act [env_name]</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L3"><code>dac</code></a></td>
+<td>Deactivate conda environment</td>
+<td><code>dac</code></td>
+</tr>
+<tr>
+<td align="center" rowspan="2"><a target="_blank" href="conda_shortcuts.sh#L21"><code>mkenv</code></a></td>
+<td rowspan="2">Create conda environment(s)</td>
+<td>From <code>.yml</code> / <code>.yaml</code> file(s): <code>mkenv [file1] [file2] ... [fileN]</code></td>
+</tr>
+<tr>
+<td>From CLI: <code>mkenv [env_name] [package1] [package2] ... [packageN]</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L47"><code>rmenv</code></a></td>
+<td>Remove conda environment(s)</td>
+<td><code>rmenv [env1] [env2] ... [envN] </code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L61"><code>rnenv</code></a></td>
+<td>Rename conda environment</td>
+<td><code>rnenv [curr_name] [new_name] </code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L81"><code>cpenv</code></a></td>
+<td>Copy conda environment</td>
+<td><code>cpenv [env_name] [copy's_name]</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L108"><code>exp</code></a></td>
+<td>Export conda environment</td>
+<td><code>exp [file]</code></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" href="conda_shortcuts.sh#L132"><code>lsenv</code></a></td>
+<td>List conda environment</td>
+<td><code>lsenv</code></td>
+</tr>
+</tbody>
+</table>
+
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
 1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
