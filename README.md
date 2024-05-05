@@ -112,15 +112,6 @@
 >   type conda_shortcuts.sh >> C:\Users\user\path\to\.bashrc
 >   source C:\Users\user\path\to\.bashrc
 >   ```
-> Restart terminal or source shell startup file (e.g., `.bashrc`) before use to apply changes.
-> * POSIX
->   ```sh
->   source ~/.bashrc
->   ```
-> * Windows
->   ```sh
->   source C:\Users\user\path\to\.bashrc
->   ```
 
 <table>
    <thead>
