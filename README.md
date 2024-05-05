@@ -97,7 +97,65 @@
        conda env list
        ```
 
-### [Optional] Conda Shortcut Commands
+## Usage
+### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
+1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
+    * Mac
+      ```
+      ⌘ + Shift + P
+      ```
+    * Windows
+      ```
+      CTRL + Shift + P
+      ```
+2. Search and select `Python: Select Interpreter`
+3. Select the virtual environment (`grovers_env`)
+4. Open `Grovers-Algorithm.ipynb` and/or `Grovers-Algorithm.py`
+5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
+6. Run program(s)
+   * `Grovers-Algorithm.ipynb`: Click `Run All`
+   * `Grovers-Algorithm.py`: Click `▷` (i.e. `Play` button) in the upper-right corner
+7. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+### Command Line
+#### Python
+1. Run `Grovers-Algorithm.py`
+   * POSIX
+      ```sh
+      $(which python) Grovers-Algorithm.py
+      ```
+   * Windows
+      ```sh
+      $(where python) Grovers-Algorithm.py
+      ```
+2. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+#### Jupyter Notebook
+1. Install `ipykernel` in the virtual environment (`grovers_env`)
+   ```
+   conda install -n grovers_env ipykernel
+   ```
+2. Add the virtual environment (`grovers_env`) as a Jupyter kernel
+   ```
+   python -m ipykernel install --user --name=grovers_env
+   ```
+3. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
+   ```
+   jupyter notebook Grovers-Algorithm.ipynb
+   ```
+4. Select the virtual environment (`grovers_env`) as the kernel before running `Grovers-Algorithm.ipynb`
+5. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+## [Optional] Conda Shortcut Commands
 > [!TIP]
 > Instead of manually typing out entire conda commands, you can save time with shortcuts.
 > 
@@ -172,64 +230,6 @@
 > Conda shortcut commands have **ONLY** been tested on `bash v5.2.26(1)-release` with `aarch64-apple-darwin23.2.0` architecture, so — just to be safe — test and make changes as needed.
 > 
 > E.g., [`rmenv`](conda_shortcuts.sh#L47) assumes the path delimeter is forward slash `/` (POSIX systems); if you use Windows (path delimeter is backslash `\`), replace forward slashes `/` in [`env_path`](conda_shortcuts.sh#L50) with backslashes `\`.
-
-## Usage
-### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
-1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
-    * Mac
-      ```
-      ⌘ + Shift + P
-      ```
-    * Windows
-      ```
-      CTRL + Shift + P
-      ```
-2. Search and select `Python: Select Interpreter`
-3. Select the virtual environment (`grovers_env`)
-4. Open `Grovers-Algorithm.ipynb` and/or `Grovers-Algorithm.py`
-5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
-6. Run program(s)
-   * `Grovers-Algorithm.ipynb`: Click `Run All`
-   * `Grovers-Algorithm.py`: Click `▷` (i.e. `Play` button) in the upper-right corner
-7. Deactivate the virtual environment (`grovers_env`) when you're finished
-   ```
-   conda deactivate
-   ```
-
-### Command Line
-#### Python
-1. Run `Grovers-Algorithm.py`
-   * POSIX
-      ```sh
-      $(which python) Grovers-Algorithm.py
-      ```
-   * Windows
-      ```sh
-      $(where python) Grovers-Algorithm.py
-      ```
-2. Deactivate the virtual environment (`grovers_env`) when you're finished
-   ```
-   conda deactivate
-   ```
-
-#### Jupyter Notebook
-1. Install `ipykernel` in the virtual environment (`grovers_env`)
-   ```
-   conda install -n grovers_env ipykernel
-   ```
-2. Add the virtual environment (`grovers_env`) as a Jupyter kernel
-   ```
-   python -m ipykernel install --user --name=grovers_env
-   ```
-3. Open `Grovers-Algorithm.ipynb` in the currently running notebook server, starting one if necessary
-   ```
-   jupyter notebook Grovers-Algorithm.ipynb
-   ```
-4. Select the virtual environment (`grovers_env`) as the kernel before running `Grovers-Algorithm.ipynb`
-5. Deactivate the virtual environment (`grovers_env`) when you're finished
-   ```
-   conda deactivate
-   ```
 
 ## Resources
 * [Anaconda Documentation](https://docs.anaconda.com)
