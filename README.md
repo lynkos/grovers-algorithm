@@ -101,14 +101,16 @@
 > [!TIP]
 > Instead of manually typing out entire conda commands, you can save time with shortcuts.
 > 
-> Add [`conda_shortcuts.sh`](conda_shortcuts.sh) to shell startup file (e.g., `.bashrc`).
+> Add [`conda_shortcuts.sh`](conda_shortcuts.sh) then source shell startup file (e.g., `.bashrc`) or restart terminal to apply changes.
 > * POSIX
 >   ```sh
 >   cat conda_shortcuts.sh >> ~/.bashrc
+>   source ~/.bashrc
 >   ```
 > * Windows
 >   ```sh
 >   type conda_shortcuts.sh >> C:\Users\user\path\to\.bashrc
+>   source C:\Users\user\path\to\.bashrc
 >   ```
 > Restart terminal or source shell startup file (e.g., `.bashrc`) before use to apply changes.
 > * POSIX
