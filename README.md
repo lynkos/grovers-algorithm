@@ -97,68 +97,88 @@
        conda env list
        ```
 
-### Conda Shortcuts (Optional)
-Instead of manually typing out entire conda commands, you can save time by adding [this `.sh` script](conda_shortcuts.sh) to your shell startup file (e.g., `.bashrc`, etc.) and using it in your terminal.
-
-> [!WARNING]
-> These shortcut commands have **ONLY** been tested on `bash v5.2.26(1)-release` with `aarch64-apple-darwin23.2.0` architecture, so — just to be safe — test and make changes as needed.
+### [Optional] Conda Shortcut Commands
+> [!TIP]
+> Instead of manually typing out entire conda commands, you can save time with shortcuts.
 > 
-> E.g., [`rmenv`](conda_shortcuts.sh#L47) assumes the path delimeter is forward slash `/` (POSIX systems); if you use Windows (path delimeter is backslash `\`), replace forward slashes `/` in [`env_path`](conda_shortcuts.sh#L50) with backslashes `\`.
+> Add [`conda_shortcuts.sh`](src/detection/conda_shortcuts.sh) to shell startup file (e.g., `.bashrc`).
+> * POSIX
+>   ```sh
+>   cat src/detection/conda_shortcuts.sh >> ~/.bashrc
+>   ```
+> * Windows
+>   ```sh
+>   type src\detection\conda_shortcuts.sh >> C:\Users\user\path\to\.bashrc
+>   ```
+> Restart terminal or source shell startup file (e.g., `.bashrc`) before use to apply changes.
+> * POSIX
+>   ```sh
+>   source ~/.bashrc
+>   ```
+> * Windows
+>   ```sh
+>   source C:\Users\user\path\to\.bashrc
+>   ```
 
 <table>
-<thead>
-<tr>
-<th><center>Command</center></th>
-<th><center>Description</center></th>
-<th><center>Usage</center></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L94"><code>act</code></a></td>
-<td>Activate conda environment</td>
-<td><code>act [env_name]</code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L3"><code>dac</code></a></td>
-<td>Deactivate conda environment</td>
-<td><code>dac</code></td>
-</tr>
-<tr>
-<td align="center" rowspan="2"><a target="_blank" href="conda_shortcuts.sh#L21"><code>mkenv</code></a></td>
-<td rowspan="2">Create conda environment(s)</td>
-<td>From <code>.yml</code> / <code>.yaml</code> file(s): <code>mkenv [file1] [file2] ... [fileN]</code></td>
-</tr>
-<tr>
-<td>From CLI: <code>mkenv [env_name] [package1] [package2] ... [packageN]</code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L47"><code>rmenv</code></a></td>
-<td>Remove conda environment(s)</td>
-<td><code>rmenv [env1] [env2] ... [envN] </code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L61"><code>rnenv</code></a></td>
-<td>Rename conda environment</td>
-<td><code>rnenv [curr_name] [new_name] </code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L81"><code>cpenv</code></a></td>
-<td>Copy conda environment</td>
-<td><code>cpenv [env_name] [copy's_name]</code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L108"><code>exp</code></a></td>
-<td>Export conda environment</td>
-<td><code>exp [file]</code></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" href="conda_shortcuts.sh#L132"><code>lsenv</code></a></td>
-<td>List conda environment</td>
-<td><code>lsenv</code></td>
-</tr>
-</tbody>
+   <thead>
+     <tr>
+       <th><center>Command</center></th>
+       <th><center>Description</center></th>
+       <th><center>Usage</center></th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L94"><code>act</code></a></td>
+       <td align="center">Activate conda environment</td>
+       <td><p><pre>act [env_name]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L3"><code>dac</code></a></td>
+       <td align="center">Deactivate conda environment</td>
+       <td><p><pre>dac</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center" rowspan="2"><a target="_blank" href="src/detection/conda_shortcuts.sh#L21"><code>mkenv</code></a></td>
+       <td rowspan="2" align="center">Create conda environment(s)</td>
+       <td><p><pre>mkenv [yaml_file1] [yaml_file2] ... [yaml_fileN]</pre></p></td>
+     </tr>
+     <tr>
+       <td><p><pre>mkenv [env_name] [package1] [package2] ... [packageN]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L47"><code>rmenv</code></a></td>
+       <td align="center">Remove conda environment(s)</td>
+       <td><p><pre>rmenv [env1] [env2] ... [envN]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L61"><code>rnenv</code></a></td>
+       <td align="center">Rename conda environment</td>
+       <td><p><pre>rnenv [curr_name] [new_name]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L81"><code>cpenv</code></a></td>
+       <td align="center">Copy conda environment</td>
+       <td><p><pre>cpenv [env_name] [copy's_name]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L108"><code>exp</code></a></td>
+       <td align="center">Export conda environment</td>
+       <td><p><pre>exp [out_file]</pre></p></td>
+     </tr>
+     <tr>
+       <td align="center"><a target="_blank" href="src/detection/conda_shortcuts.sh#L132"><code>lsenv</code></a></td>
+       <td align="center">List conda environment</td>
+       <td><p><pre>lsenv</pre></p></td>
+     </tr>
+   </tbody>
 </table>
+
+> [!WARNING]
+> Conda shortcut commands have **ONLY** been tested on `bash v5.2.26(1)-release` with `aarch64-apple-darwin23.2.0` architecture, so — just to be safe — test and make changes as needed.
+> 
+> E.g., [`rmenv`](src/detection/conda_shortcuts.sh#L47) assumes the path delimeter is forward slash `/` (POSIX systems); if you use Windows (path delimeter is backslash `\`), replace forward slashes `/` in [`env_path`](src/detection/conda_shortcuts.sh#L50) with backslashes `\`.
 
 ## Usage
 ### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
