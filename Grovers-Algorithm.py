@@ -1,11 +1,9 @@
 from qiskit import QuantumCircuit as qc
 from qiskit import QuantumRegister as qr
 from qiskit import transpile
-from qiskit.providers import Backend
+from qiskit_aer import AerSimulator
 from qiskit.result import Counts
-from qiskit_ibm_runtime import QiskitRuntimeService
 from matplotlib.pyplot import show, subplots, xticks, yticks
-from matplotlib.backend_bases import MouseEvent
 from math import pi, sqrt
 from heapq import nlargest
 
@@ -16,10 +14,8 @@ SHOTS: int = 10000                        # Amount of times the algorithm is sim
 FONTSIZE: int = 10                        # Histogram's font size
 
 """Unless you know what you are doing, please do not modify the following constants, otherwise you risk breaking the program."""
-TARGETS: set[str] = { f"{s:0{N}b}" for s in SEARCH_VALUES }     # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
-QUBITS: qr = qr(N, "qubit")                                     # N-qubit quantum register
-BACKEND_NAME: str = "ibmq_qasm_simulator"                       # Name of backend to run the algorithm on
-BACKEND: Backend = QiskitRuntimeService().backend(BACKEND_NAME) # Backend to run the algorithm on
+TARGETS: set[str] = { f"{s:0{N}b}" for s in SEARCH_VALUES } # Set of m N-qubit binary strings representing target state(s) (i.e. SEARCH_VALUES in base 2)
+QUBITS: qr = qr(N, "qubit")                                 # N-qubit quantum register
 
 def print_circuit(circuit: qc, name: str = "") -> None:
     """Print quantum circuit.
@@ -159,11 +155,11 @@ def outcome(winners: list[str], counts: Counts) -> None:
         
         print(f"Target(s) found with {winners_frequency / total:.2%} accuracy!")
 
-def display_results(results: Counts, combine_other_states: bool = True) -> None:
+def display_results(results, combine_other_states: bool = True) -> None:
     """Print outcome and display histogram of simulation results.
 
     Args:
-        results (Counts): Each state and its respective frequency.
+        results: Each state and its respective frequency.
         combine_other_states (bool, optional): Whether to combine all non-winning states into 1 bar
         labeled "Others" or not. Defaults to True.
     """
@@ -215,11 +211,11 @@ def display_results(results: Counts, combine_other_states: bool = True) -> None:
                                bbox = dict(facecolor = "white", alpha = 0.4, edgecolor = "None", pad = 0)
                                )
     
-    def hover(event: MouseEvent) -> None:
+    def hover(event) -> None:
         """Display frequency above each bar upon hovering over it.
 
         Args:
-            event (MouseEvent): Matplotlib mouse event.
+            event: Matplotlib event.
         """
         visibility = annotation.get_visible()
         if event.inaxes == axes:
@@ -246,9 +242,11 @@ if __name__ == "__main__":
     # Generate quantum circuit for Grover's algorithm 
     grover_circuit = grover()
 
-    # Simulate Grover's algorithm with a Qiskit backend and get results
-    with BACKEND.open_session() as session:
-        results = BACKEND.run(transpile(grover_circuit, BACKEND, optimization_level = 2), shots = SHOTS).result()
+    # Simulate Grover's algorithm locally
+    backend = AerSimulator(method = "density_matrix")
 
+    # Run simulation then get results
+    results = backend.run(transpile(grover_circuit, backend, optimization_level = 2), shots = SHOTS).result()
+    
     # Get each state's frequency and display simulation results
     display_results(results.get_counts(), False)

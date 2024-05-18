@@ -7,7 +7,7 @@ dependencies:
   - pip>=23.3.1
   - pip:
     - qiskit==1.0.2
-    - qiskit_ibm_runtime==0.22.0
+    - qiskit-aer==0.14.1
     - pylatexenc==2.10
     - seaborn==0.13.2
     - matplotlib==3.8.3
