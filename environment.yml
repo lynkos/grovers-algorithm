@@ -3,12 +3,11 @@ channels:
   - defaults
 dependencies:
   - python=3.12.2
-  - numpy=1.26.4
-  - pip>=23.3.1
+  - pip
   - pip:
-    - qiskit==1.0.2
-    - qiskit-aer==0.14.1
+    - matplotlib==3.9.0
+    - notebook==7.2.0
     - pylatexenc==2.10
+    - qiskit==1.1.0
+    - qiskit-aer==0.14.1
     - seaborn==0.13.2
-    - matplotlib==3.8.3
-    - notebook==7.1.2
