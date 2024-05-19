@@ -174,7 +174,7 @@ def display_results(results, combine_other_states: bool = True) -> None:
     winners_y_axis = [ *winners.values() ]
 
     # All other states (i.e. non-winners) and their frequencies
-    others = {state : frequency for state, frequency in results.items() if state not in winners}
+    others = { state : frequency for state, frequency in results.items() if state not in winners }
 
     # X-axis and y-axis value(s) for all other states, respectively
     other_states_x_axis = "Others" if combine_other_states else [*others]
@@ -239,14 +239,17 @@ def display_results(results, combine_other_states: bool = True) -> None:
     figure.canvas.mpl_disconnect(id)
 
 if __name__ == "__main__":
-    # Generate quantum circuit for Grover's algorithm 
-    grover_circuit = grover()
-
     # Simulate Grover's algorithm locally
     backend = AerSimulator(method = "density_matrix")
 
-    # Run simulation then get results
-    results = backend.run(transpile(grover_circuit, backend, optimization_level = 2), shots = SHOTS).result()
+    # Generate optimized grover circuit for simulation
+    transpiled_circuit = transpile(grover(), backend, optimization_level = 2)
+
+    # Run Grover's algorithm simulation 
+    job = backend.run(transpiled_circuit, shots = SHOTS)
+
+    # Get simulation results
+    results = job.result()
     
     # Get each state's frequency and display simulation results
     display_results(results.get_counts(), False)
