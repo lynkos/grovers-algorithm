@@ -200,7 +200,7 @@
    conda deactivate
    ```
 
-#### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+#### Visual Studio Code
 1. Open [`grovers_algorithm.py`](grovers_algorithm.py)
 2. Run [`grovers_algorithm.py`](grovers_algorithm.py): Click `▷` (i.e. `Play` button) in the upper-right corner
 3. Deactivate the virtual environment (`grovers_env`) when you're finished
@@ -209,8 +209,8 @@
    ```
 
 ### [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb)
-#### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
-1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
+#### Visual Studio Code (Recommended)
+1. Open the Command Palette with the relevant keyboard shortcut
     * Mac
       ```
       ⌘ + Shift + P
@@ -229,7 +229,7 @@
    conda deactivate
    ```
 
-#### Jupyter Notebook
+#### Command Line
 1. Install `ipykernel` in the virtual environment (`grovers_env`)
    ```
    conda install -n grovers_env ipykernel
@@ -257,6 +257,7 @@
 * [Technical Support - Jupyter Google Group](https://discourse.jupyter.org)
 * [Qiskit Documentation](https://qiskit.org/documentation/index.html)
 * [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
+* [Using Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
 ## License
 Distributed under the [MIT License](LICENSE.md), Copyright © 2024 Kiran Brahmatewari
