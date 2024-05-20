@@ -119,7 +119,7 @@
        ```
 
 ## Usage
-### [`grovers_algorithm.py`](grovers_algorithm.py)
+### Python Script
 #### Command Line (Recommended)
 1. Run [`grovers_algorithm.py`](grovers_algorithm.py)
    * POSIX
@@ -208,7 +208,7 @@
    conda deactivate
    ```
 
-### [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb)
+### Jupyter Notebook
 #### Visual Studio Code (Recommended)
 1. Open the Command Palette with the relevant keyboard shortcut
     * Mac
