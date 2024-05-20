@@ -119,30 +119,8 @@
        ```
 
 ## Usage
-### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
-1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
-    * Mac
-      ```
-      ⌘ + Shift + P
-      ```
-    * Windows
-      ```
-      CTRL + Shift + P
-      ```
-2. Search and select `Python: Select Interpreter`
-3. Select the virtual environment (`grovers_env`)
-4. Open [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb) and/or [`grovers_algorithm.py`](grovers_algorithm.py)
-5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
-6. Run program(s)
-   * [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb): Click `Run All`
-   * [`grovers_algorithm.py`](grovers_algorithm.py): Click `▷` (i.e. `Play` button) in the upper-right corner
-7. Deactivate the virtual environment (`grovers_env`) when you're finished
-   ```
-   conda deactivate
-   ```
-
-### Command Line
-#### Python
+### [`grovers_algorithm.py`](grovers_algorithm.py)
+#### Command Line (Recommended)
 1. Run [`grovers_algorithm.py`](grovers_algorithm.py)
    * POSIX
       ```sh
@@ -181,25 +159,25 @@
               <td id="modpath" align="center" style="white-space: nowrap;"><code>-n, --n-qubits &lt;n_qubits&gt;</code></td>
               <td align="center"><code>int</code></td>
               <td align="center">Number of qubits</td>
-              <td align="center">5</td>
+              <td align="center"><code>5</code></td>
           </tr>
           <tr>
               <td align="center" style="white-space: nowrap;"><code>-s, --search &lt;search&gt;</code></td>
               <td align="center"><code>int</code></td>
-              <td align="center">Set of nonnegative integers to search for</td>
-              <td align="center"><code>{ 11, 9, 0, 3 }</code></td>
+              <td align="center">Nonnegative integers to search for</td>
+              <td align="center"><code>11 9 0 3</code><br>(i.e., { 11, 9, 0, 3 })</td>
           </tr>
           <tr>
               <td align="center" style="white-space: nowrap;"><code>-S, --shots &lt;shots&gt;</code></td>
               <td align="center"><code>int</code></td>
               <td align="center">Number of simulations</td>
-              <td align="center">1000</td>
+              <td align="center"><code>1000</code></td>
           </tr>
           <tr>
               <td align="center" style="white-space: nowrap;"><code>-f, --font-size &lt;font_size&gt;</code></td>
               <td align="center"><code>int</code></td>
               <td align="center">Histogram's font size</td>
-              <td align="center">10</td>
+              <td align="center"><code>10</code></td>
           </tr>
           <tr>
               <td align="center" style="white-space: nowrap;"><code>-p, --print</code></td>
@@ -208,7 +186,7 @@
               <td align="center"><code>False</code></td>
           </tr>
           <tr>
-              <td align="center" style="white-space: nowrap;"><code>-c, --combine &lt;combine_states&gt;</code></td>
+              <td align="center" style="white-space: nowrap;"><code>-c, --combine</code></td>
               <td align="center"><code>bool</code></td>
               <td align="center">Whether to combine all non-winning states into 1 bar labeled "Others" or not</td>
               <td align="center"><code>False</code></td>
@@ -218,6 +196,35 @@
    </details>
 
 2. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+#### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
+1. Open [`grovers_algorithm.py`](grovers_algorithm.py)
+2. Run [`grovers_algorithm.py`](grovers_algorithm.py): Click `▷` (i.e. `Play` button) in the upper-right corner
+3. Deactivate the virtual environment (`grovers_env`) when you're finished
+   ```
+   conda deactivate
+   ```
+
+### [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb)
+#### [Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) (Recommended)
+1. Open the Command Palette in [Visual Studio Code](https://code.visualstudio.com/download) with the relevant keyboard shortcut
+    * Mac
+      ```
+      ⌘ + Shift + P
+      ```
+    * Windows
+      ```
+      CTRL + Shift + P
+      ```
+2. Search and select `Python: Select Interpreter`
+3. Select the virtual environment (`grovers_env`)
+4. Open [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb)
+5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
+6. Run [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb) by clicking `Run All`
+7. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
    ```
