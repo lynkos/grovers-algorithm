@@ -180,24 +180,24 @@ class GroversAlgorithm:
             
             print(f"Target(s) found with {winners_frequency / total:.2%} accuracy!")
 
-    def _display_results(self, results) -> None:
+    def _show_histogram(self, histogram_data) -> None:
         """Print outcome and display histogram of simulation results.
 
         Args:
-            results: Each state and its respective frequency.
+            data: Each state and its respective frequency.
         """
         # State(s) with highest count and their frequencies
-        winners = { winner : results.get(winner) for winner in nlargest(len(self._targets), results, key = results.get) }
+        winners = { winner : histogram_data.get(winner) for winner in nlargest(len(self._targets), histogram_data, key = histogram_data.get) }
 
         # Print outcome
-        self._outcome(list(winners.keys()), results)
+        self._outcome(list(winners.keys()), histogram_data)
 
         # X-axis and y-axis value(s) for winners, respectively
         winners_x_axis = [ str(winner) for winner in [*winners] ]
         winners_y_axis = [ *winners.values() ]
 
         # All other states (i.e. non-winners) and their frequencies
-        others = { state : frequency for state, frequency in results.items() if state not in winners }
+        others = { state : frequency for state, frequency in histogram_data.items() if state not in winners }
 
         # X-axis and y-axis value(s) for all other states, respectively
         other_states_x_axis = "Others" if self._args.combine else [*others]
@@ -277,8 +277,11 @@ class GroversAlgorithm:
         # Get simulation results
         results = job.result()
         
-        # Get each state's frequency and display simulation results
-        self._display_results(results.get_counts())
+        # Get each state's histogram data (including frequency) from simulation results
+        data = results.get_counts()
+
+        # Display simulation results
+        self._show_histogram(data)
 
     def _init_parser(self,
                      title: str,
@@ -324,7 +327,7 @@ class GroversAlgorithm:
                                   nargs = "+",
                                   dest = "search",
                                   metavar = "<search>",
-                                  help = f"set of nonnegative integers to search for with Grover's algorithm (default: {search})")
+                                  help = f"nonnegative integers to search for with Grover's algorithm (default: {search})")
 
         self._parser.add_argument("-S, --shots",
                                   type = int,
@@ -345,7 +348,6 @@ class GroversAlgorithm:
                                   type = bool,
                                   default = print,
                                   dest = "print",
-                                  metavar = "<print>",
                                   help = f"whether or not to print quantum circuit(s) (default: {print})")
 
         self._parser.add_argument("-c, --combine",
@@ -353,7 +355,6 @@ class GroversAlgorithm:
                                   type = bool,
                                   default = combine_states,
                                   dest = "combine",
-                                  metavar = "<combine_states>",
                                   help = f"whether to combine all non-winning states into 1 bar labeled \"Others\" or not (default: {combine_states})")
 
 if __name__ == "__main__":
