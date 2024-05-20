@@ -131,11 +131,11 @@
       ```
 2. Search and select `Python: Select Interpreter`
 3. Select the virtual environment (`grovers_env`)
-4. Open [`Grovers-Algorithm.ipynb`](Grovers-Algorithm.ipynb) and/or [`Grovers-Algorithm.py`](Grovers-Algorithm.py)
+4. Open [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb) and/or [`grovers_algorithm.py`](grovers_algorithm.py)
 5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 6. Run program(s)
-   * [`Grovers-Algorithm.ipynb`](Grovers-Algorithm.ipynb): Click `Run All`
-   * [`Grovers-Algorithm.py`](Grovers-Algorithm.py): Click `▷` (i.e. `Play` button) in the upper-right corner
+   * [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb): Click `Run All`
+   * [`grovers_algorithm.py`](grovers_algorithm.py): Click `▷` (i.e. `Play` button) in the upper-right corner
 7. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
@@ -143,15 +143,80 @@
 
 ### Command Line
 #### Python
-1. Run [`Grovers-Algorithm.py`](Grovers-Algorithm.py)
+1. Run [`grovers_algorithm.py`](grovers_algorithm.py)
    * POSIX
       ```sh
-      python Grovers-Algorithm.py
+      python grovers_algorithm.py
       ```
    * Windows
       ```sh
-      python Grovers-Algorithm.py
+      python grovers_algorithm.py
       ```
+
+   <details open>
+      <summary>Command Line Arguments</summary>
+      <table align="center" style="width: 100%; text-align: center; display: block; max-width: -moz-fit-content; max-width: fit-content; overflow-x: auto;">
+          <thead>
+          <tr>
+              <th><center>Option</center></th>
+              <th><center>Type</center></th>
+              <th><center>Description</center></th>
+              <th><center>Default</center></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-H, --help</code></td>
+              <td align="center"></td>
+              <td align="center">Show help message and exit</td>
+              <td align="center"></td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-T, --title &lt;title&gt;</code></td>
+              <td align="center"><code>str</code></td>
+              <td align="center">Window title</td>
+              <td align="center">"Grover's Algorithm"</td>
+          </tr>
+          <tr>
+              <td id="modpath" align="center" style="white-space: nowrap;"><code>-n, --n-qubits &lt;n_qubits&gt;</code></td>
+              <td align="center"><code>int</code></td>
+              <td align="center">Number of qubits</td>
+              <td align="center">5</td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-s, --search &lt;search&gt;</code></td>
+              <td align="center"><code>int</code></td>
+              <td align="center">Set of nonnegative integers to search for</td>
+              <td align="center"><code>{ 11, 9, 0, 3 }</code></td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-S, --shots &lt;shots&gt;</code></td>
+              <td align="center"><code>int</code></td>
+              <td align="center">Number of simulations</td>
+              <td align="center">1000</td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-f, --font-size &lt;font_size&gt;</code></td>
+              <td align="center"><code>int</code></td>
+              <td align="center">Histogram's font size</td>
+              <td align="center">10</td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-p, --print</code></td>
+              <td align="center"><code>bool</code></td>
+              <td align="center">Whether or not to print quantum circuit(s)</td>
+              <td align="center"><code>False</code></td>
+          </tr>
+          <tr>
+              <td align="center" style="white-space: nowrap;"><code>-c, --combine &lt;combine_states&gt;</code></td>
+              <td align="center"><code>bool</code></td>
+              <td align="center">Whether to combine all non-winning states into 1 bar labeled "Others" or not</td>
+              <td align="center"><code>False</code></td>
+          </tr>
+          </tbody>
+      </table>
+   </details>
+
 2. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
@@ -166,11 +231,11 @@
    ```
    python -m ipykernel install --user --name=grovers_env
    ```
-3. Open [`Grovers-Algorithm.ipynb`](Grovers-Algorithm.ipynb) in the currently running notebook server, starting one if necessary
+3. Open [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb) in the currently running notebook server, starting one if necessary
    ```
-   jupyter notebook Grovers-Algorithm.ipynb
+   jupyter notebook grovers_algorithm.ipynb
    ```
-4. Select the virtual environment (`grovers_env`) as the kernel before running [`Grovers-Algorithm.ipynb`](Grovers-Algorithm.ipynb)
+4. Select the virtual environment (`grovers_env`) as the kernel before running [`grovers_algorithm.ipynb`](grovers_algorithm.ipynb)
 5. Deactivate the virtual environment (`grovers_env`) when you're finished
    ```
    conda deactivate
