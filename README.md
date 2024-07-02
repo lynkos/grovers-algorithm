@@ -273,5 +273,8 @@ python grovers_algorithm.py
 * [Documentation for Visual Studio Code](https://code.visualstudio.com/docs)
 * [Using Jupyter Notebooks in Visual Studio Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)
 
+## Credit
+Special thanks to [Simanraj Sadana](https://sqmscenter.fnal.gov/profile/simanraj-sadana) for "[Grover's search algorithm for *n* qubits with optimal number of iterations](https://arxiv.org/abs/2011.04051)", which has been a helpful reference and an informative read
+
 ## License
 Distributed under the [MIT License](LICENSE.md), Copyright © 2024 Kiran Brahmatewari
