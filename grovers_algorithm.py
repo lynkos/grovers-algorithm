@@ -18,7 +18,7 @@ class GroversAlgorithm:
                  print: bool = False,
                  combine_states: bool = False) -> None:
         """
-        _summary_
+        Simulate Grover's algorithm using Qiskit's AerSimulator.
 
         Args:
             title (str, optional): Window title. Defaults to "Grover's Algorithm".
