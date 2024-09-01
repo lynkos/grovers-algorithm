@@ -14,14 +14,6 @@
 <img alt="Repo Size" src="https://img.shields.io/github/repo-size/lynkos/grovers-algorithm?style=flat&label=Repo+Size&labelColor=393939&color=ff62b1">
 </div>
 
----
-
-<p align="center">
- ⭐️⭐️⭐️ Please consider <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">starring this repo</a> if you find it helpful, interesting, or useful! ⭐️⭐️⭐️
-</p>
-
----
-
 ## Requirements
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
 
