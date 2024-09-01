@@ -17,7 +17,7 @@
 ---
 
 <p align="center">
- ⭐️⭐️⭐️ Please <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">star</a> this repo if you find it helpful, interesting, or useful! ⭐️⭐️⭐️
+ ⭐️⭐️⭐️ Please consider <a target="_blank" href="https://github.com/lynkos/grovers-algorithm">starring this repo</a> if you find it helpful, interesting, or useful! ⭐️⭐️⭐️
 </p>
 
 ---
