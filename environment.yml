@@ -1,4 +1,4 @@
-name: grovers_env
+name: grovenv
 channels:
   - defaults
 dependencies:

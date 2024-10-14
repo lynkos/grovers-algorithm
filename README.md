@@ -65,7 +65,6 @@
 > </details>
 
 ## Installation
-<!-- TODO Change `grovers_env` to `grovenv` here and in `environment.yml` -->
 1. Verify that conda is installed
    ```
    conda --version
@@ -91,14 +90,14 @@
    ```
    conda env create -f environment.yml
    ```
-6. Activate the virtual environment (`grovers_env`)
+6. Activate the virtual environment (`grovenv`)
    ```
-   conda activate grovers_env
+   conda activate grovenv
    ```
-7. Confirm that the virtual environment (`grovers_env`) is active
+7. Confirm that the virtual environment (`grovenv`) is active
      * If active, the virtual environment's name should be in parentheses () or brackets [] before your command prompt, e.g.
        ```
-       (grovers_env) $
+       (grovenv) $
        ```
      * If necessary, see which environments are available and/or currently active (active environment denoted with asterisk (*))
        ```
@@ -225,28 +224,28 @@ python src/grovers_algorithm.py
       CTRL + Shift + P
       ```
 2. Search and select `Python: Select Interpreter`
-3. Select the virtual environment (`grovers_env`)
+3. Select the virtual environment (`grovenv`)
 4. Open [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb)
-5. Confirm `grovers_env` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
+5. Confirm `grovenv` is the selected [kernel](https://docs.jupyter.org/en/latest/install/kernels.html)
 6. Run [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb) by clicking `Run All`
 
 #### Command Line
-1. Install `ipykernel` in the virtual environment (`grovers_env`)
+1. Install `ipykernel` in the virtual environment (`grovenv`)
    ```
-   conda install -n grovers_env ipykernel
+   conda install -n grovenv ipykernel
    ```
-2. Add the virtual environment (`grovers_env`) as a Jupyter kernel
+2. Add the virtual environment (`grovenv`) as a Jupyter kernel
    ```
-   python -m ipykernel install --user --name=grovers_env
+   python -m ipykernel install --user --name=grovenv
    ```
 3. Open [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb) in the currently running notebook server, starting one if necessary
    ```
    jupyter notebook src/grovers_algorithm.ipynb
    ```
-4. Select the virtual environment (`grovers_env`) as the kernel before running [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb)
+4. Select the virtual environment (`grovenv`) as the kernel before running [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb)
 
 ## Cleanup
-1. [Optional] Deactivate the virtual environment (`grovers_env`) to clean up and remove it
+1. [Optional] Deactivate the virtual environment (`grovenv`) to clean up and remove it
    ```
    conda deactivate
    ```
