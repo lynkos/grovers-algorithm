@@ -12,6 +12,14 @@
 <img alt="Repo Size" src="https://img.shields.io/github/repo-size/lynkos/grovers-algorithm?style=flat&label=Repo+Size&labelColor=393939&color=ff62b1">
 </div>
 
+> [!IMPORTANT]
+> This repository has accompanying blog posts on [my blog](https://blog.lynkos.dev)!
+> 
+> * [**Quantum Search Algorithm**](https://blog.lynkos.dev/posts/grover): Short, Twitter/X-inspired thread format
+> * [**Quantum Search Algorithm (Full)**](https://blog.lynkos.dev/posts/grover-full): Full explanation with additional details
+> 
+> These blog posts are much more readable and user-friendly than this repository by itself and GitHub. If you're interested in sharing or reading this repository as a blog post, please feel free to refer to the aforementioned links!
+
 ## Requirements
 - [x] [Anaconda](https://docs.continuum.io/free/anaconda/install) **OR** [Miniconda](https://docs.conda.io/projects/miniconda/en/latest)
 
