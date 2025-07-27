@@ -224,14 +224,8 @@ python src/grovers_algorithm.py
 ### Jupyter Notebook
 #### Visual Studio Code (Recommended)
 1. Open the Command Palette with the relevant keyboard shortcut
-    * Mac
-      ```
-      ⌘ + Shift + P
-      ```
-    * Windows
-      ```
-      CTRL + Shift + P
-      ```
+    * Mac: <kbd>⌘</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
+    * Windows: <kbd>CTRL</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>
 2. Search and select `Python: Select Interpreter`
 3. Select the virtual environment (`grovenv`)
 4. Open [`grovers_algorithm.ipynb`](src/grovers_algorithm.ipynb)
