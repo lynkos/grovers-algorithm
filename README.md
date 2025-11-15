@@ -8,7 +8,6 @@
 <br>
 <img alt="License" src="https://img.shields.io/github/license/lynkos/grovers-algorithm?style=flat&label=License&labelColor=393939&color=788200&link=https%3A%2F%2Fgithub.com%2Flynkos%2Fgrovers-algorithm%2Fblob%2Fmaster%2FLICENSE.md">
 <img alt="Last Commit" src="https://img.shields.io/github/last-commit/lynkos/grovers-algorithm?style=flat&label=Last+Commit&labelColor=393939&color=be0000">
-<img alt="Commit Activity" src="https://img.shields.io/github/commit-activity/y/lynkos/grovers-algorithm?style=flat&label=Commit+Activity&labelColor=393939&color=b30086">
 <img alt="Repo Size" src="https://img.shields.io/github/repo-size/lynkos/grovers-algorithm?style=flat&label=Repo+Size&labelColor=393939&color=ff62b1">
 <a target="_blank" href="https://deepwiki.com/lynkos/grovers-algorithm" title="DeepWiki for lynkos/grovers-algorithm repository"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </div>
